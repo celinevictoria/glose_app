@@ -30,7 +30,7 @@ class AnswerCard extends StatelessWidget {
                     : debugPrint("Wrong!");
               Navigator.push(
                   context,
-                  questionCount == 2
+                  questionCount == 4
                       ? MaterialPageRoute(
                           builder: (context) => const EndPage(),
                         )
