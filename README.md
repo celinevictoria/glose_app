@@ -1,3 +1,3 @@
 # glose_app
 
-A new Flutter project.
+Live Demo: https://celinevictoria.github.io/glose_app/
