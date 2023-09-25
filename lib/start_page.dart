@@ -25,6 +25,7 @@ class StartPage extends StatelessWidget {
                     MaterialPageRoute(
                       builder: (context) => GamePage(
                         questionCount: 0,
+                        scoreCount: 0,
                       ),
                     ));
               },

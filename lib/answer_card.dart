@@ -8,10 +8,12 @@ class AnswerCard extends StatelessWidget {
     super.key,
     required this.cardText,
     required this.questionCount,
+    required this.scoreCount,
   });
 
   final String cardText;
   final int questionCount;
+  final int scoreCount;
   final List<String> answerList = answerListFunc();
 
   @override
@@ -31,14 +33,28 @@ class AnswerCard extends StatelessWidget {
               Navigator.push(
                   context,
                   questionCount == 16
-                      ? MaterialPageRoute(
-                          builder: (context) => const EndPage(),
-                        )
-                      : MaterialPageRoute(
-                          builder: (context) => GamePage(
-                            questionCount: questionCount + 1,
-                          ),
-                        ));
+                      ? answerList.contains(cardText)
+                          ? MaterialPageRoute(
+                              builder: (context) =>
+                                  EndPage(scoreCount: scoreCount + 1),
+                            )
+                          : MaterialPageRoute(
+                              builder: (context) =>
+                                  EndPage(scoreCount: scoreCount),
+                            )
+                      : answerList.contains(cardText)
+                          ? MaterialPageRoute(
+                              builder: (context) => GamePage(
+                                questionCount: questionCount + 1,
+                                scoreCount: scoreCount + 1,
+                              ),
+                            )
+                          : MaterialPageRoute(
+                              builder: (context) => GamePage(
+                                questionCount: questionCount + 1,
+                                scoreCount: scoreCount,
+                              ),
+                            ));
             },
             child: SizedBox(
               width: 300,

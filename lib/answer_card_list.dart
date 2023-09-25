@@ -3,10 +3,14 @@ import 'answer_card.dart';
 
 class AnswerCardList extends StatelessWidget {
   const AnswerCardList(
-      {super.key, required this.optionList, required this.questionCount});
+      {super.key,
+      required this.optionList,
+      required this.questionCount,
+      required this.scoreCount});
 
   final List<String> optionList;
   final int questionCount;
+  final int scoreCount;
 
   @override
   Widget build(BuildContext context) {
@@ -19,6 +23,7 @@ class AnswerCardList extends StatelessWidget {
             return AnswerCard(
               cardText: optionList[index],
               questionCount: questionCount,
+              scoreCount: scoreCount,
             );
           },
         ))

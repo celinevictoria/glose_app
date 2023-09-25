@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'start_page.dart';
 
 class EndPage extends StatelessWidget {
-  const EndPage({super.key});
+  const EndPage({super.key, required this.scoreCount});
+
+  final int scoreCount;
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +16,7 @@ class EndPage extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          //const Center(child: Text("Done")),
+          Center(child: Text("$scoreCount / 17")),
           Center(
             child: Card(
               clipBehavior: Clip.hardEdge,
@@ -31,7 +33,9 @@ class EndPage extends StatelessWidget {
                   child: const SizedBox(
                     width: 300,
                     height: 100,
-                    child: Center(child: Text("Restart Game", style: TextStyle(fontSize: 20))),
+                    child: Center(
+                        child: Text("Restart Game",
+                            style: TextStyle(fontSize: 20))),
                   )),
             ),
           )
