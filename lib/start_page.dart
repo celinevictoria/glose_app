@@ -31,7 +31,8 @@ class StartPage extends StatelessWidget {
               child: const SizedBox(
                 width: 300,
                 height: 100,
-                child: Center(child: Text("Start Game", style: TextStyle(fontSize: 20))),
+                child: Center(
+                    child: Text("Start Game", style: TextStyle(fontSize: 20))),
               )),
         ),
       ),
