@@ -12,7 +12,10 @@ class GamePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text(masterList.keys.elementAt(questionCount))),
+        appBar: AppBar(
+          title: Text(masterList.keys.elementAt(questionCount)),
+          automaticallyImplyLeading: false,
+        ),
         body: AnswerCardList(
           optionList: masterList.values.elementAt(questionCount),
           questionCount: questionCount,
