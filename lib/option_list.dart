@@ -1,3 +1,5 @@
+import 'dart:math';
+
 Map<String, List<String>> optionListFunc() {
   Map<String, List<String>> masterMap = {
     "Aboriginal": ["Skilpadde", "Sko", "Same", "Aboriginer"],
@@ -40,6 +42,17 @@ Map<String, List<String>> optionListFunc() {
   }
 
   return masterMap;
+}
+
+Map<String, List<String>> randomQuestion(masterList) {
+  String question =
+      masterList.keys.elementAt(Random().nextInt(masterList.length));
+
+  List<String> answerList = masterList[question];
+
+  return {
+    question: answerList
+  };
 }
 
 List<String> answerListFunc() {
