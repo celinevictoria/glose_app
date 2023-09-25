@@ -47,12 +47,14 @@ class AnswerCard extends StatelessWidget {
                               builder: (context) => GamePage(
                                 questionCount: questionCount + 1,
                                 scoreCount: scoreCount + 1,
+                                responseText: "Correct!",
                               ),
                             )
                           : MaterialPageRoute(
                               builder: (context) => GamePage(
                                 questionCount: questionCount + 1,
                                 scoreCount: scoreCount,
+                                responseText: "Wrong!",
                               ),
                             ));
             },
