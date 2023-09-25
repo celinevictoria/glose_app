@@ -6,15 +6,15 @@ class GamePage extends StatelessWidget {
   GamePage({super.key, required this.questionCount});
 
   final int questionCount;
-  //final Map<String, List<String>> optionList = optionListFunc();
-  final Map<String, List<String>> question = randomQuestion(optionListFunc());
+  final Map<String, List<String>> masterList = optionListFunc();
+  //final Map<String, List<String>> question = randomQuestion(optionListFunc());
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text(question.keys.elementAt(0))),
+        appBar: AppBar(title: Text(masterList.keys.elementAt(questionCount))),
         body: AnswerCardList(
-          optionList: question.values.elementAt(0),
+          optionList: masterList.values.elementAt(questionCount),
           questionCount: questionCount,
         ));
   }
