@@ -31,7 +31,7 @@ class EndPage extends StatelessWidget {
                   child: const SizedBox(
                     width: 300,
                     height: 100,
-                    child: Center(child: Text("Restart Game")),
+                    child: Center(child: Text("Restart Game", style: TextStyle(fontSize: 20))),
                   )),
             ),
           )

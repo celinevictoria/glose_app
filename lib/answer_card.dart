@@ -43,7 +43,7 @@ class AnswerCard extends StatelessWidget {
             child: SizedBox(
               width: 300,
               height: 100,
-              child: Center(child: Text(cardText)),
+              child: Center(child: Text(cardText, style: const TextStyle(fontSize: 20))),
             ),
           )),
     );
