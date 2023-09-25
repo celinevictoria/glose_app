@@ -31,8 +31,8 @@ Map<String, List<String>> optionListFunc() {
     "Landscape": ["Havutsikt", "Sugekopp", "Kjøkkenskap", "Landskap"],
     "Country": ["By", "Slott", "Sykkel", "Land"],
     "Although": ["Istedenfor", "Igjennom", "Syltetøy", "Selv om"],
-    "Desert": ["Dessert", "Elv", "Rompe", "Ørken"],
-    "Entertainment": ["Bønner", "Skoger", "Huler", "Underholding"],
+    "Desert": ["Dessert", "Elv", "Rumpe", "Ørken"],
+    "Entertainment": ["Bønner", "Skoger", "Huler", "Underholdning"],
     "Coast": ["Bønne", "Innsjø", "Fjell", "Kyst"],
     "Population": ["Bønner", "Skoger", "Huler", "Befolkning"]
   };
