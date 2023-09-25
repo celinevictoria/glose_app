@@ -32,7 +32,7 @@ Map<String, List<String>> optionListFunc() {
     "Country": ["By", "Slott", "Sykkel", "Land"],
     "Although": ["Istedenfor", "Igjennom", "Syltetøy", "Selv om"],
     "Desert": ["Dessert", "Elv", "Rumpe", "Ørken"],
-    "Entertainment": ["Bønner", "Skoger", "Huler", "Underholding"],
+    "Entertainment": ["Bønner", "Skoger", "Huler", "Underholdning"],
     "Coast": ["Bønne", "Innsjø", "Fjell", "Kyst"],
     "Population": ["Bønner", "Skoger", "Huler", "Befolkning"]
   };
