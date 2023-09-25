@@ -15,7 +15,13 @@ class GamePage extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: Text(masterList.keys.elementAt(questionCount)),
-          actions: [Text("$scoreCount / 17")],
+          actions: [
+            Text(
+              "Score: $scoreCount / 17",
+              textAlign: TextAlign.center,
+              style: const TextStyle(fontSize: 20),
+            )
+          ],
           automaticallyImplyLeading: false,
         ),
         body: AnswerCardList(
