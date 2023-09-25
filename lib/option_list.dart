@@ -1,5 +1,5 @@
 import 'dart:math';
-
+// question count: 17
 Map<String, List<String>> optionListFunc() {
   Map<String, List<String>> masterMap = {
     "Aboriginal": ["Skilpadde", "Sko", "Same", "Aboriginer"],

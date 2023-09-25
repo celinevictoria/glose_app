@@ -22,15 +22,15 @@ class AnswerCard extends StatelessWidget {
           child: InkWell(
             //splashColor: const Color(0xff6750a4).withAlpha(30),
             splashColor: answerList.contains(cardText)
-              ? const Color.fromARGB(255, 52, 222, 67).withAlpha(30)
-              : const Color.fromARGB(255, 227, 20, 20).withAlpha(30),
+                ? const Color.fromARGB(255, 52, 222, 67).withAlpha(30)
+                : const Color.fromARGB(255, 227, 20, 20).withAlpha(30),
             onTap: () {
               answerList.contains(cardText)
-                    ? debugPrint("Correct!")
-                    : debugPrint("Wrong!");
+                  ? debugPrint("Correct!")
+                  : debugPrint("Wrong!");
               Navigator.push(
                   context,
-                  questionCount == 4
+                  questionCount == 16
                       ? MaterialPageRoute(
                           builder: (context) => const EndPage(),
                         )
@@ -43,7 +43,8 @@ class AnswerCard extends StatelessWidget {
             child: SizedBox(
               width: 300,
               height: 100,
-              child: Center(child: Text(cardText)),
+              child: Center(
+                  child: Text(cardText, style: const TextStyle(fontSize: 20))),
             ),
           )),
     );
