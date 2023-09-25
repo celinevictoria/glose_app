@@ -26,6 +26,7 @@ class StartPage extends StatelessWidget {
                       builder: (context) => GamePage(
                         questionCount: 0,
                         scoreCount: 0,
+                        responseText: "",
                       ),
                     ));
               },
