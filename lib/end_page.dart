@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'start_page.dart';
+import 'option_list.dart';
 
 class EndPage extends StatelessWidget {
-  const EndPage({super.key, required this.scoreCount});
+  const EndPage({super.key, required this.scoreCount, required this.weekInput});
 
   final int scoreCount;
+  final String weekInput;
 
   @override
   Widget build(BuildContext context) {
+    int totalQuestionCount = weekToQuestionCount(weekInput);
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
@@ -16,7 +19,7 @@ class EndPage extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Center(child: Text("$scoreCount / 23")),
+          Center(child: Text("$scoreCount / $totalQuestionCount")),
           Center(
             child: Card(
               clipBehavior: Clip.hardEdge,

@@ -4,16 +4,17 @@ import 'end_page.dart';
 import 'option_list.dart';
 
 class AnswerCard extends StatelessWidget {
-  AnswerCard({
-    super.key,
-    required this.cardText,
-    required this.questionCount,
-    required this.scoreCount,
-  });
+  AnswerCard(
+      {super.key,
+      required this.cardText,
+      required this.questionCount,
+      required this.scoreCount,
+      required this.weekInput});
 
   final String cardText;
   final int questionCount;
   final int scoreCount;
+  final String weekInput;
   final List<String> answerList = answerListFunc();
 
   @override
@@ -32,15 +33,19 @@ class AnswerCard extends StatelessWidget {
                   : debugPrint("Wrong!");
               Navigator.push(
                   context,
-                  questionCount == 22
+                  questionCount == weekToQuestionCount(weekInput) - 1
                       ? answerList.contains(cardText)
                           ? MaterialPageRoute(
-                              builder: (context) =>
-                                  EndPage(scoreCount: scoreCount + 1),
+                              builder: (context) => EndPage(
+                                scoreCount: scoreCount + 1,
+                                weekInput: weekInput,
+                              ),
                             )
                           : MaterialPageRoute(
-                              builder: (context) =>
-                                  EndPage(scoreCount: scoreCount),
+                              builder: (context) => EndPage(
+                                scoreCount: scoreCount,
+                                weekInput: weekInput,
+                              ),
                             )
                       : answerList.contains(cardText)
                           ? MaterialPageRoute(
@@ -48,6 +53,7 @@ class AnswerCard extends StatelessWidget {
                                 questionCount: questionCount + 1,
                                 scoreCount: scoreCount + 1,
                                 responseText: "Correct!",
+                                weekInput: weekInput,
                               ),
                             )
                           : MaterialPageRoute(
@@ -55,6 +61,7 @@ class AnswerCard extends StatelessWidget {
                                 questionCount: questionCount + 1,
                                 scoreCount: scoreCount,
                                 responseText: "Wrong!",
+                                weekInput: weekInput,
                               ),
                             ));
             },
