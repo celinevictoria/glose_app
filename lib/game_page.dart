@@ -22,10 +22,11 @@ class GamePage extends StatelessWidget {
         title: Text(masterList.keys.elementAt(questionCount)),
         actions: [
           Text(
-            "Score: $scoreCount / 17",
-            textAlign: TextAlign.center,
+            "Score: $scoreCount / 23",
+            textAlign: TextAlign.left,
             style: const TextStyle(fontSize: 20),
-          )
+          ),
+          //const Padding(padding: EdgeInsets.only(right: 0.3))
         ],
         automaticallyImplyLeading: false,
       ),
@@ -47,7 +48,7 @@ class GamePage extends StatelessWidget {
             ),
             const Spacer(),
             Text(
-              "Question nr.: $questionCount / 17",
+              "Question nr.: $questionCount / 23",
               style: const TextStyle(fontSize: 20),
             )
           ],

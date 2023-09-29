@@ -16,7 +16,7 @@ class EndPage extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Center(child: Text("$scoreCount / 17")),
+          Center(child: Text("$scoreCount / 23")),
           Center(
             child: Card(
               clipBehavior: Clip.hardEdge,

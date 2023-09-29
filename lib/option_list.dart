@@ -27,14 +27,21 @@ Map<String, List<String>> optionListFunc() {
     //New week
     "Home to": ["Hjemmefra", "Synge til", "Potetgull fra", "Hjem til"],
     "Unique": ["Grønn", "Skjønn", "Bønn", "Unik"],
-    "Diverse": ["Diverse", "Urfolk", "Skog", "Mangfoldig"],
+    "Diverse": ["Diverse", "Sjokoladekake", "Skog", "Mangfoldig"],
     "Landscape": ["Havutsikt", "Sugekopp", "Kjøkkenskap", "Landskap"],
     "Country": ["By", "Slott", "Sykkel", "Land"],
     "Although": ["Istedenfor", "Igjennom", "Syltetøy", "Selv om"],
     "Desert": ["Dessert", "Elv", "Rumpe", "Ørken"],
     "Entertainment": ["Bønner", "Skoger", "Huler", "Underholdning"],
     "Coast": ["Bønne", "Innsjø", "Fjell", "Kyst"],
-    "Population": ["Bønner", "Skoger", "Huler", "Befolkning"]
+    "Population": ["Bønner", "Skoger", "Huler", "Befolkning"],
+    //New week
+    "Continent": ["Hav", "Konstant", "Sukkerspinn", "Kontinent"],
+    "Joey": ["Joey (baby koala)", "Joey (baby kamel)", "Joey (baby zebra)", "Joey (baby kenguru)"],
+    "Kangaroo": ["Koala", "Kiwi", "Kakao", "Kenguru"],
+    "Boomerang": ["Pinne", "Golfball", "Frisbee", "Boomerang"],
+    "Change": ["Vekslepenger", "Sjampo", "Kontanter", "Endring"],
+    "Page": ["Bok", "Potet", "Liste", "Side"]
   };
 
   for (List<String> optionList in masterMap.values) {
@@ -73,6 +80,12 @@ List<String> answerListFunc() {
     "Ørken",
     "Underholdning",
     "Kyst",
-    "Befolkning"
+    "Befolkning",
+    "Kontinent",
+    "Joey (baby kenguru)",
+    "Kenguru",
+    "Boomerang",
+    "Vekslepenger", "Endring",
+    "Side"
   ];
 }
