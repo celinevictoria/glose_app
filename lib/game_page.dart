@@ -3,26 +3,29 @@ import 'option_list.dart';
 import 'answer_card_list.dart';
 
 class GamePage extends StatelessWidget {
-  GamePage(
+  const GamePage(
       {super.key,
       required this.questionCount,
       required this.scoreCount,
-      required this.responseText});
+      required this.responseText,
+      required this.weekInput});
 
   final int questionCount;
   final int scoreCount;
   final String responseText;
-  final Map<String, List<String>> masterList = optionListFunc();
-  //final Map<String, List<String>> question = randomQuestion(optionListFunc());
+  final String weekInput;
+  
 
   @override
   Widget build(BuildContext context) {
+    final Map<String, List<String>> masterList = masterMapFuncAll(weekInput);
+    final int totalQuestionCount = weekToQuestionCount(weekInput);
     return Scaffold(
       appBar: AppBar(
         title: Text(masterList.keys.elementAt(questionCount)),
         actions: [
           Text(
-            "Score: $scoreCount / 23",
+            "Score: $scoreCount / $totalQuestionCount",
             textAlign: TextAlign.left,
             style: const TextStyle(fontSize: 20),
           ),
@@ -34,6 +37,7 @@ class GamePage extends StatelessWidget {
         optionList: masterList.values.elementAt(questionCount),
         questionCount: questionCount,
         scoreCount: scoreCount,
+        weekInput: weekInput,
       ),
       bottomNavigationBar: BottomAppBar(
         color: Colors.transparent,
@@ -48,7 +52,7 @@ class GamePage extends StatelessWidget {
             ),
             const Spacer(),
             Text(
-              "Question nr.: $questionCount / 23",
+              "Question nr.: $questionCount / $totalQuestionCount",
               style: const TextStyle(fontSize: 20),
             )
           ],

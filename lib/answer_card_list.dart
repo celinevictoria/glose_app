@@ -6,11 +6,13 @@ class AnswerCardList extends StatelessWidget {
       {super.key,
       required this.optionList,
       required this.questionCount,
-      required this.scoreCount});
+      required this.scoreCount,
+      required this.weekInput});
 
   final List<String> optionList;
   final int questionCount;
   final int scoreCount;
+  final String weekInput;
 
   @override
   Widget build(BuildContext context) {
@@ -25,6 +27,7 @@ class AnswerCardList extends StatelessWidget {
               cardText: optionList[index],
               questionCount: questionCount,
               scoreCount: scoreCount,
+              weekInput: weekInput,
             );
           },
         ))
