@@ -3,7 +3,7 @@ import 'dart:math';
 // question count: 17
 Map<String, List<String>> masterMapFuncAll(String week) {
   Map<String, List<String>> masterMap;
-  if (week == "38") {
+  if (week == "Week 38") {
     masterMap = {
       "Aboriginal": ["Skilpadde", "Sko", "Same", "Aboriginer"],
       "Convict": [
@@ -28,7 +28,7 @@ Map<String, List<String>> masterMapFuncAll(String week) {
       ],
       "Townships": ["Bønner", "Skoger", "Huler", "Byer/Tettsteder"],
     };
-  } else if (week == "39") {
+  } else if (week == "Week 39") {
     masterMap = {
       "Home to": ["Hjemmefra", "Synge til", "Potetgull fra", "Hjem til"],
       "Unique": ["Grønn", "Skjønn", "Bønn", "Unik"],
@@ -41,7 +41,7 @@ Map<String, List<String>> masterMapFuncAll(String week) {
       "Coast": ["Bønne", "Innsjø", "Fjell", "Kyst"],
       "Population": ["Bønner", "Skoger", "Huler", "Befolkning"],
     };
-  } else if (week == "40") {
+  } else if (week == "Week 40") {
     masterMap = {
       "Continent": ["Hav", "Konstant", "Sukkerspinn", "Kontinent"],
       "Joey": [
@@ -113,11 +113,11 @@ Map<String, List<String>> masterMapFuncAll(String week) {
 }
 
 int weekToQuestionCount(String week) {
-  if (week == "38") {
+  if (week == "Week 38") {
     return 7;
-  } else if (week == "39") {
+  } else if (week == "Week 39") {
     return 10;
-  } else if (week == "40") {
+  } else if (week == "Week 40") {
     return 6;
   } else {
     return 23;
