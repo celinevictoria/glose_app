@@ -10,26 +10,10 @@ Map<String, String> matchMapFuncEngToNor() {
   };
 }
 
-Map<String, String> matchMapFuncNorToEng() {
-  return {
-    "Kontinent": "Continent",
-    "Joey (baby kenguru)": "Joey",
-    "Kenguru": "Kangaroo",
-    "Boomerang": "Boomerang",
-    "Endring": "Change",
-    "Side": "Page"
-  };
-}
-
 // Translate Functions
 String? translateEngToNor(String engWord) {
   Map<String, String> matchMap = matchMapFuncEngToNor();
   return matchMap[engWord];
-}
-
-String? translateNorToEng(String norWord) {
-  Map<String, String> matchMap = matchMapFuncNorToEng();
-  return matchMap[norWord];
 }
 
 // List with all words (both english and norwegian)
