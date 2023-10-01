@@ -13,7 +13,7 @@ class MatchGamePage extends StatelessWidget {
 
   final int questionCount;
   final int scoreCount;
-  final Map<String, String> matchList = matchListFunc();
+  final Map<String, String> matchList = matchMapFuncEngToNor();
   
   //final Map<String, List<String>> masterList = masterMapFuncAll("Week 40");
   final int totalQuestionCount = weekToQuestionCount("Week 40");
