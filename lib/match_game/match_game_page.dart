@@ -36,7 +36,7 @@ class _MatchGamePageState extends State<MatchGamePage> {
     final int totalQuestionCount = weekToQuestionCount(widget.weekCount);
     return Scaffold(
         appBar: AppBar(
-          title: const Text("Match game"),
+          title: const Text("Match Mode"),
           automaticallyImplyLeading: false,
           actions: [
             Text(
