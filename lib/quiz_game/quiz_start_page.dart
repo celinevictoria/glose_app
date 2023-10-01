@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'start_button.dart';
+import 'quiz_start_button.dart';
 
-class StartPage extends StatelessWidget {
-  const StartPage({
+class QuizStartPage extends StatelessWidget {
+  const QuizStartPage({
     super.key,
   });
 
@@ -11,7 +11,7 @@ class StartPage extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: const Text("Glose App"),
-          automaticallyImplyLeading: false,
+          //automaticallyImplyLeading: false,
         ),
         body: const Column(children: [
           Padding(padding: EdgeInsets.all(30)),

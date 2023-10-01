@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
-import 'game_page.dart';
+import 'package:glose_app/match_game/match_game_page.dart';
+import 'match_funcs.dart';
 
-class StartButton extends StatelessWidget {
-  const StartButton({
-    super.key,
-    required this.weekInput
-  });
+class MatchStartButton extends StatelessWidget {
+  const MatchStartButton({super.key, required this.weekInput});
 
   final String weekInput;
-
+  
   @override
   Widget build(BuildContext context) {
+    final List<String> matchList = matchListFunc(weekInput)..shuffle();
     return Center(
       child: Card(
         clipBehavior: Clip.hardEdge,
@@ -21,11 +20,10 @@ class StartButton extends StatelessWidget {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => GamePage(
+                    builder: (context) => MatchGamePage(
                       questionCount: 0,
-                      scoreCount: 0,
-                      responseText: "",
-                      weekInput: weekInput,
+                      weekCount: weekInput,
+                      matchList: matchList,
                     ),
                   ));
             },
@@ -33,8 +31,7 @@ class StartButton extends StatelessWidget {
               width: 300,
               height: 100,
               child: Center(
-                  child: Text("Start Game - $weekInput",
-                      style: const TextStyle(fontSize: 20))),
+                  child: Text("Start Game - $weekInput", style: const TextStyle(fontSize: 20))),
             )),
       ),
     );

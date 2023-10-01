@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'start_page.dart';
-import 'option_list.dart';
+import 'package:glose_app/home_page.dart';
+import 'universal_funcs.dart';
 
 class EndPage extends StatelessWidget {
   const EndPage({super.key, required this.scoreCount, required this.weekInput});
@@ -30,7 +30,7 @@ class EndPage extends StatelessWidget {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const StartPage(),
+                          builder: (context) => const HomePage(),
                         ));
                   },
                   child: const SizedBox(
