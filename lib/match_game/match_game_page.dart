@@ -22,6 +22,7 @@ class MatchGamePage extends StatefulWidget {
 
 class _MatchGamePageState extends State<MatchGamePage> {
   int scoreCount = 0;
+  String responseText = "";
   //final Map<String, String> matchList = matchMapFuncEngToNor();
   final Map<String, String> matchMapEng = matchMapFuncEngToNor();
   final Map<String, String> matchMapNor = matchMapFuncEngToNor();
@@ -99,9 +100,11 @@ class _MatchGamePageState extends State<MatchGamePage> {
                           widget.matchList = widget.matchList..shuffle();
                           selectedList = [-1, -1];
                           scoreCount++;
+                          responseText = "Correct!";
                         } else {
                           selectedList = [-1, -1];
                           scoreCount--;
+                          responseText = "Try Again";
                         }
                       } else if (matchMapEng.keys.contains(selectedTwo)) {
                         String engKey = selectedTwo;
@@ -114,9 +117,11 @@ class _MatchGamePageState extends State<MatchGamePage> {
                           widget.matchList = widget.matchList..shuffle();
                           selectedList = [-1, -1];
                           scoreCount++;
+                          responseText = "Correct!";
                         } else {
                           selectedList = [-1, -1];
                           scoreCount--;
+                          responseText = "Try Again";
                         }
                       } else if ((matchMapEng.keys.contains(selectedOne) &&
                               matchMapEng.keys.contains(selectedTwo)) ||
@@ -151,6 +156,15 @@ class _MatchGamePageState extends State<MatchGamePage> {
               );
             },
           ),
-        ));
+        ),
+        bottomNavigationBar: SizedBox(height: 50, child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                responseText,
+                style: const TextStyle(fontSize: 20),
+              )
+            ],
+          )));
   }
 }
