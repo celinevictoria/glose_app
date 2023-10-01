@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'quiz_game/quiz_game_page.dart';
+import 'quiz_game_page.dart';
 
 class StartButton extends StatelessWidget {
   const StartButton({
