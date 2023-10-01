@@ -157,14 +157,16 @@ class _MatchGamePageState extends State<MatchGamePage> {
             },
           ),
         ),
-        bottomNavigationBar: SizedBox(height: 50, child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                responseText,
-                style: const TextStyle(fontSize: 20),
-              )
-            ],
-          )));
+        bottomNavigationBar: SizedBox(
+            height: 50,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  responseText,
+                  style: const TextStyle(fontSize: 20),
+                )
+              ],
+            )));
   }
 }
