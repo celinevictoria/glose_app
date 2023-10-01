@@ -14,8 +14,8 @@ class MatchStartPage extends StatelessWidget {
           title: const Text("Glose App"),
           //automaticallyImplyLeading: false,
         ),
-        body: Column(children: [
-          const Padding(padding: EdgeInsets.all(30)),
+        body: const Column(children: [
+          Padding(padding: EdgeInsets.all(30)),
           //MatchStartButton(weekInput: "All Weeks"),
           MatchStartButton(weekInput: "Week 38"),
           MatchStartButton(weekInput: "Week 39"),
