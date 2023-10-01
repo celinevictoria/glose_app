@@ -15,7 +15,9 @@ class HomePage extends StatelessWidget {
           automaticallyImplyLeading: false,
         ),
         body: Column(children: [
-          const Center(child: Text("Choose game mode")),
+          const Padding(padding: EdgeInsets.all(20)),
+          const Center(child: Text("Choose game mode:", style: TextStyle(fontSize: 20),)),
+          const Padding(padding: EdgeInsets.all(10)),
           Center(
               child: Card(
             clipBehavior: Clip.hardEdge,
