@@ -30,9 +30,9 @@ class StartPage extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => MatchGamePage(
+                        builder: (context) => const MatchGamePage(
                           questionCount: 0,
-                          scoreCount: 0,
+                          //scoreCount: 0,
                         ),
                       ));
                 },
