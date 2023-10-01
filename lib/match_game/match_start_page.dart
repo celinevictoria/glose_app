@@ -11,7 +11,7 @@ class MatchStartPage extends StatelessWidget {
     //List<String> matchList = matchListFunc(weekCount);
     return Scaffold(
         appBar: AppBar(
-          title: const Text("Glose App"),
+          title: const Text("Match Mode"),
           //automaticallyImplyLeading: false,
         ),
         body: const Column(children: [
