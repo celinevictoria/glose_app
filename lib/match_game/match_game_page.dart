@@ -4,14 +4,16 @@ import 'match_funcs.dart';
 import '../universal_funcs.dart';
 import '../end_page.dart';
 
+// ignore: must_be_immutable
 class MatchGamePage extends StatefulWidget {
-  const MatchGamePage({
-    super.key,
-    required this.questionCount,
-    //required this.scoreCount,
-  });
+  MatchGamePage(
+      {super.key, required this.questionCount, required this.weekCount, required this.matchList
+      //required this.scoreCount,
+      });
 
   final int questionCount;
+  final String weekCount;
+  List<String> matchList;
   //final int scoreCount;
 
   @override
@@ -23,16 +25,14 @@ class _MatchGamePageState extends State<MatchGamePage> {
   //final Map<String, String> matchList = matchMapFuncEngToNor();
   final Map<String, String> matchMapEng = matchMapFuncEngToNor();
   final Map<String, String> matchMapNor = matchMapFuncEngToNor();
-  List<String> matchList = matchListFunc()..shuffle();
+
   //List<int> selectedList = List<int>.filled(2, -1);
   List<int> selectedList = [-1, -1];
   int lastChanged = -1;
 
-  //final Map<String, List<String>> masterList = masterMapFuncAll("Week 40");
-  final int totalQuestionCount = weekToQuestionCount("Week 40");
-
   @override
   Widget build(BuildContext context) {
+    final int totalQuestionCount = weekToQuestionCount(widget.weekCount);
     return Scaffold(
         appBar: AppBar(
           title: const Text("Match game"),
@@ -54,7 +54,7 @@ class _MatchGamePageState extends State<MatchGamePage> {
               //mainAxisSpacing: 16.0,
             ),
             //padding: const EdgeInsets.all(16.0),
-            itemCount: matchList.length,
+            itemCount: widget.matchList.length,
             itemBuilder: (context, index) {
               return Card(
                 clipBehavior: Clip.hardEdge,
@@ -86,17 +86,17 @@ class _MatchGamePageState extends State<MatchGamePage> {
                       }
                     });
                     if (!selectedList.contains(-1)) {
-                      String selectedOne = matchList[selectedList[0]];
-                      String selectedTwo = matchList[selectedList[1]];
+                      String selectedOne = widget.matchList[selectedList[0]];
+                      String selectedTwo = widget.matchList[selectedList[1]];
                       if (matchMapEng.keys.contains(selectedOne)) {
                         String engKey = selectedOne;
                         if (translateEngToNor(engKey) == selectedTwo) {
                           String? norVal = matchMapEng[engKey];
                           debugPrint("Eng: $engKey");
                           debugPrint("Nor: $norVal");
-                          matchList.remove(engKey);
-                          matchList.remove(norVal);
-                          matchList = matchList..shuffle();
+                          widget.matchList.remove(engKey);
+                          widget.matchList.remove(norVal);
+                          widget.matchList = widget.matchList..shuffle();
                           selectedList = [-1, -1];
                           scoreCount++;
                         } else {
@@ -109,9 +109,9 @@ class _MatchGamePageState extends State<MatchGamePage> {
                           String? norVal = matchMapEng[engKey];
                           debugPrint("Eng: $engKey");
                           debugPrint("Nor: $norVal");
-                          matchList.remove(engKey);
-                          matchList.remove(norVal);
-                          matchList = matchList..shuffle();
+                          widget.matchList.remove(engKey);
+                          widget.matchList.remove(norVal);
+                          widget.matchList = widget.matchList..shuffle();
                           selectedList = [-1, -1];
                           scoreCount++;
                         } else {
@@ -126,13 +126,13 @@ class _MatchGamePageState extends State<MatchGamePage> {
                         scoreCount--;
                       }
                     }
-                    if (matchList.isEmpty) {
+                    if (widget.matchList.isEmpty) {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const EndPage(
-                              scoreCount: 0,
-                              weekInput: "Week 40",
+                            builder: (context) => EndPage(
+                              scoreCount: scoreCount,
+                              weekInput: widget.weekCount,
                             ),
                           ));
                     }
@@ -140,8 +140,12 @@ class _MatchGamePageState extends State<MatchGamePage> {
                   child: SizedBox(
                     width: 150,
                     height: 100,
-                    child:
-                        Center(child: Text(matchList[index], style: const TextStyle(fontSize: 20))),
+                    child: Center(
+                        child: Text(
+                      widget.matchList[index],
+                      style: const TextStyle(fontSize: 18),
+                      textAlign: TextAlign.center,
+                    )),
                   ),
                 ),
               );
