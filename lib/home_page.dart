@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:glose_app/quiz_game/quiz_start_page.dart';
-import 'quiz_game/quiz_start_button.dart';
-import 'match_game/match_game_page.dart';
 import './match_game/match_start_page.dart';
 
 class HomePage extends StatelessWidget {

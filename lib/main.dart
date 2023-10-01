@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:glose_app/home_page.dart';
-import 'quiz_game/quiz_start_page.dart';
 
 void main() {
   runApp(const MainApp());
