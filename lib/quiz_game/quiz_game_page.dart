@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'option_list.dart';
-import 'answer_card_list.dart';
+import 'quiz_funcs.dart';
+import 'quiz_answer_card_list.dart';
+import '../universal_funcs.dart';
 
 class GamePage extends StatelessWidget {
   const GamePage(

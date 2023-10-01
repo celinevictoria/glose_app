@@ -112,17 +112,7 @@ Map<String, List<String>> masterMapFuncAll(String week) {
   return masterMap;
 }
 
-int weekToQuestionCount(String week) {
-  if (week == "Week 38") {
-    return 7;
-  } else if (week == "Week 39") {
-    return 10;
-  } else if (week == "Week 40") {
-    return 6;
-  } else {
-    return 23;
-  }
-}
+
 
 Map<String, List<String>> randomQuestion(masterList) {
   String question =

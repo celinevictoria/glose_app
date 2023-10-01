@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'start_page.dart';
-import 'option_list.dart';
+import 'universal_funcs.dart';
 
 class EndPage extends StatelessWidget {
   const EndPage({super.key, required this.scoreCount, required this.weekInput});

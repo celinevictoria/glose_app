@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'answer_card.dart';
+import 'quiz_answer_card.dart';
 
 class AnswerCardList extends StatelessWidget {
   const AnswerCardList(

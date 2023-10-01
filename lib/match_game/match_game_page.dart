@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'match_list_func.dart';
-import '../option_list.dart';
+import 'match_funcs.dart';
+
+import '../universal_funcs.dart';
 import '../end_page.dart';
-//import 'match_game_card_list.dart';
-//import 'match_list_func.dart';
 
 class MatchGamePage extends StatefulWidget {
   const MatchGamePage({

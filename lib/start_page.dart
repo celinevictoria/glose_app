@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'start_button.dart';
-import 'match_game/match_game.dart';
+import 'match_game/match_game_page.dart';
 
 class StartPage extends StatelessWidget {
   const StartPage({

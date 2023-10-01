@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'game_page.dart';
-import 'end_page.dart';
-import 'option_list.dart';
+import 'quiz_game_page.dart';
+import '../end_page.dart';
+import 'quiz_funcs.dart';
+import '../universal_funcs.dart';
 
 class AnswerCard extends StatelessWidget {
   AnswerCard(
