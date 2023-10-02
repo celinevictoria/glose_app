@@ -16,7 +16,7 @@ class MatchStartPage extends StatelessWidget {
         ),
         body: const Column(children: [
           Padding(padding: EdgeInsets.all(30)),
-          //MatchStartButton(weekInput: "All Weeks"),
+          MatchStartButton(weekInput: "All Weeks"),
           MatchStartButton(weekInput: "Week 38"),
           MatchStartButton(weekInput: "Week 39"),
           MatchStartButton(weekInput: "Week 40"),
