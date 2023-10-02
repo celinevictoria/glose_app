@@ -51,6 +51,7 @@ class _MatchGamePageState extends State<MatchGamePage> {
           child: GridView.builder(
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 3,
+              childAspectRatio: (1 / .6),
               //crossAxisSpacing: 16.0,
               //mainAxisSpacing: 16.0,
             ),
