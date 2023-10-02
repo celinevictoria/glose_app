@@ -93,6 +93,34 @@ List<String> matchListFunc(String weekCount) {
       "Page",
       "Side"
     ];
+  } else if (weekCount == "All Weeks") {
+    return [
+      "Aboriginal", "Aboriginer",
+      "Convict", "Dømme/dømt person",
+      "Apologised", "Unnskyldte seg",
+      "Indidigenous people", "Urfolk",
+      "Claimed", "Krevde/Hevdet",
+      "Claim back", "Kreve tilbake",
+      "Townships", "Byer/Tettsteder",
+      //New week
+      "Home to", "Hjem til",
+      "Unique", "Unik",
+      "Diverse", "Mangfoldig",
+      "Landscape", "Landskap",
+      "Country", "Land",
+      "Although", "Selv om",
+      "Desert", "Ørken",
+      "Entertainment", "Underholdning",
+      "Coast", "Kyst",
+      "Population", "Befolkning",
+      //New week
+      "Continent", "Kontinent",
+      "Joey", "Joey (baby kenguru)",
+      "Kangaroo", "Kenguru",
+      "Boomerang", "Boomerang",
+      "Change", "Endring",
+      "Page", "Side"
+    ];
   }
   return [];
 }
