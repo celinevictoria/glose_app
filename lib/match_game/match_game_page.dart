@@ -143,16 +143,13 @@ class _MatchGamePageState extends State<MatchGamePage> {
                           ));
                     }
                   },
-                  child: SizedBox(
-                    width: 150,
-                    height: 100,
-                    child: Center(
+                  child: Center(
                         child: Text(
                       widget.matchList[index],
                       style: const TextStyle(fontSize: 18),
                       textAlign: TextAlign.center,
                     )),
-                  ),
+                  
                 ),
               );
             },
