@@ -51,6 +51,7 @@ class _MatchGamePageState extends State<MatchGamePage> {
           child: GridView.builder(
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 3,
+              childAspectRatio: (1 / .6),
               //crossAxisSpacing: 16.0,
               //mainAxisSpacing: 16.0,
             ),
@@ -142,16 +143,13 @@ class _MatchGamePageState extends State<MatchGamePage> {
                           ));
                     }
                   },
-                  child: SizedBox(
-                    width: 150,
-                    height: 100,
-                    child: Center(
+                  child: Center(
                         child: Text(
                       widget.matchList[index],
                       style: const TextStyle(fontSize: 18),
                       textAlign: TextAlign.center,
                     )),
-                  ),
+                  
                 ),
               );
             },
