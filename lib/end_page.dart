@@ -17,9 +17,11 @@ class EndPage extends StatelessWidget {
         title: const Text("Glose App"),
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        //mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Center(child: Text("$scoreCount / $totalQuestionCount")),
+          const Padding(padding: EdgeInsets.all(20)),
+          Center(child: Text("Score: $scoreCount / $totalQuestionCount", style: const TextStyle(fontSize: 20),)),
+          const Padding(padding: EdgeInsets.all(10)),
           Center(
             child: Card(
               clipBehavior: Clip.hardEdge,
