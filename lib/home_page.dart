@@ -16,50 +16,42 @@ class HomePage extends StatelessWidget {
         ),
         body: Column(children: [
           const Padding(padding: EdgeInsets.all(20)),
-          const Center(child: Text("Choose game mode:", style: TextStyle(fontSize: 20),)),
-          const Padding(padding: EdgeInsets.all(10)),
-          Center(
-              child: Card(
-            clipBehavior: Clip.hardEdge,
-            child: InkWell(
-                splashColor: const Color(0xff6750a4).withAlpha(30),
-                onTap: () {
-                  debugPrint("Tapped");
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const QuizStartPage(),
-                      ));
-                },
-                child: const SizedBox(
-                  width: 300,
-                  height: 100,
-                  child: Center(
-                      child:
-                          Text("Quiz Mode", style: TextStyle(fontSize: 20))),
-                )),
+          const Center(
+              child: Text(
+            "Choose game mode:",
+            style: TextStyle(fontSize: 20),
           )),
-          Center(
-              child: Card(
-            clipBehavior: Clip.hardEdge,
-            child: InkWell(
-                splashColor: const Color(0xff6750a4).withAlpha(30),
-                onTap: () {
-                  debugPrint("Tapped");
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const MatchStartPage(),
-                      ));
-                },
-                child: const SizedBox(
-                  width: 300,
-                  height: 100,
-                  child: Center(
-                      child:
-                          Text("Match Mode", style: TextStyle(fontSize: 20))),
-                )),
-          ))
+          const Padding(padding: EdgeInsets.all(10)),
+          gamemodeCard(context, "Quiz Mode"),
+          gamemodeCard(context, "Match Mode")
         ]));
+  }
+
+  Center gamemodeCard(
+    BuildContext context,
+    String gameModeTest,
+  ) {
+    return Center(
+        child: Card(
+      clipBehavior: Clip.hardEdge,
+      child: InkWell(
+          splashColor: const Color(0xff6750a4).withAlpha(30),
+          onTap: () {
+            debugPrint("Tapped");
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) =>
+                      gameModeTest == "Quiz Mode" ? const QuizStartPage() : const MatchStartPage(),
+                ));
+          },
+          child: SizedBox(
+            width: 300,
+            height: 100,
+            child: Center(
+                child: Text(gameModeTest,
+                    textAlign: TextAlign.center, style: const TextStyle(fontSize: 20))),
+          )),
+    ));
   }
 }
