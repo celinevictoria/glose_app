@@ -53,7 +53,7 @@ Map<String, List<String>> masterMapFuncAll(String week) {
       "Anteater": ["Beltedyr", "Dovendyr", "Kamel", "Maursluker"],
       "Venomous": ["Blodig", "Vemodig", "Hyggelig", "Giftig"]
     };
-  } else if (week == "All weeks") {
+  } else if (week == "All Weeks") {
     masterMap = {
       //Week 38
       "Aboriginal": ["Skilpadde", "Sko", "Same", "Aboriginer"],

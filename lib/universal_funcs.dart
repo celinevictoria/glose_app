@@ -8,6 +8,6 @@ int weekToQuestionCount(String week) {
   } else if (week == "Week 42") {
     return 5;
   } else {
-    return 23;
+    return 28;
   }
 }
