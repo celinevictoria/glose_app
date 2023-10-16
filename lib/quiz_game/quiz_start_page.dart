@@ -19,6 +19,7 @@ class QuizStartPage extends StatelessWidget {
           StartButton(weekInput: "Week 38"),
           StartButton(weekInput: "Week 39"),
           StartButton(weekInput: "Week 40"),
+          StartButton(weekInput: "Week 42"),
         ]));
   }
 }

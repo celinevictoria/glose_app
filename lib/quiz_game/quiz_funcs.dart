@@ -13,19 +13,9 @@ Map<String, List<String>> masterMapFuncAll(String week) {
         "Dømme/dømt person"
       ],
       "Apologised": ["Same", "Sov", "Danset", "Unnskyldte seg"],
-      "Indidigenous people": [
-        "Skilpaddefolk",
-        "Late mennesker",
-        "Lave mennesker",
-        "Urfolk"
-      ],
+      "Indidigenous people": ["Skilpaddefolk", "Late mennesker", "Lave mennesker", "Urfolk"],
       "Claimed": ["Lagde/Fant", "Dusjet/Badet", "Stjal/Lånte", "Krevde/Hevdet"],
-      "Claim back": [
-        "Rygge tilbake",
-        "Kysse tilbake",
-        "Dytte frem",
-        "Kreve tilbake"
-      ],
+      "Claim back": ["Rygge tilbake", "Kysse tilbake", "Dytte frem", "Kreve tilbake"],
       "Townships": ["Bønner", "Skoger", "Huler", "Byer/Tettsteder"],
     };
   } else if (week == "Week 39") {
@@ -55,7 +45,15 @@ Map<String, List<String>> masterMapFuncAll(String week) {
       "Change": ["Vekslepenger", "Sjampo", "Kontanter", "Endring"],
       "Page": ["Bok", "Potet", "Liste", "Side"]
     };
-  } else {
+  } else if (week == "Week 42") {
+    masterMap = {
+      "Thorns": ["Roser", "Poteter", "Søppelbøtter", "Torner"],
+      "Swallow": ["Sverge", "Tygge", "Spytte", "Svelge"],
+      "Support": ["Nøtter", "Stol", "Sjakkbrett", "Støtte"],
+      "Anteater": ["Beltedyr", "Dovendyr", "Kamel", "Maursluker"],
+      "Venomous": ["Blodig", "Vemodig", "Hyggelig", "Giftig"]
+    };
+  } else if (week == "All weeks") {
     masterMap = {
       //Week 38
       "Aboriginal": ["Skilpadde", "Sko", "Same", "Aboriginer"],
@@ -66,19 +64,9 @@ Map<String, List<String>> masterMapFuncAll(String week) {
         "Dømme/dømt person"
       ],
       "Apologised": ["Same", "Sov", "Danset", "Unnskyldte seg"],
-      "Indidigenous people": [
-        "Skilpaddefolk",
-        "Late mennesker",
-        "Lave mennesker",
-        "Urfolk"
-      ],
+      "Indidigenous people": ["Skilpaddefolk", "Late mennesker", "Lave mennesker", "Urfolk"],
       "Claimed": ["Lagde/Fant", "Dusjet/Badet", "Stjal/Lånte", "Krevde/Hevdet"],
-      "Claim back": [
-        "Rygge tilbake",
-        "Kysse tilbake",
-        "Dytte frem",
-        "Kreve tilbake"
-      ],
+      "Claim back": ["Rygge tilbake", "Kysse tilbake", "Dytte frem", "Kreve tilbake"],
       "Townships": ["Bønner", "Skoger", "Huler", "Byer/Tettsteder"],
       //Week 39
       "Home to": ["Hjemmefra", "Synge til", "Potetgull fra", "Hjem til"],
@@ -110,6 +98,8 @@ Map<String, List<String>> masterMapFuncAll(String week) {
       "Anteater": ["Beltedyr", "Dovendyr", "Kamel", "Maursluker"],
       "Venomous": ["Blodig", "Vemodig", "Hyggelig", "Giftig"]
     };
+  } else {
+    masterMap = {};
   }
 
   for (List<String> optionList in masterMap.values) {
@@ -119,11 +109,8 @@ Map<String, List<String>> masterMapFuncAll(String week) {
   return masterMap;
 }
 
-
-
 Map<String, List<String>> randomQuestion(masterList) {
-  String question =
-      masterList.keys.elementAt(Random().nextInt(masterList.length));
+  String question = masterList.keys.elementAt(Random().nextInt(masterList.length));
 
   List<String> answerList = masterList[question];
 
