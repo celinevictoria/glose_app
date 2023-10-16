@@ -57,6 +57,7 @@ Map<String, List<String>> masterMapFuncAll(String week) {
     };
   } else {
     masterMap = {
+      //Week 38
       "Aboriginal": ["Skilpadde", "Sko", "Same", "Aboriginer"],
       "Convict": [
         "Krype/Krypende person",
@@ -79,7 +80,7 @@ Map<String, List<String>> masterMapFuncAll(String week) {
         "Kreve tilbake"
       ],
       "Townships": ["Bønner", "Skoger", "Huler", "Byer/Tettsteder"],
-      //New week
+      //Week 39
       "Home to": ["Hjemmefra", "Synge til", "Potetgull fra", "Hjem til"],
       "Unique": ["Grønn", "Skjønn", "Bønn", "Unik"],
       "Diverse": ["Diverse", "Sjokoladekake", "Skog", "Mangfoldig"],
@@ -90,7 +91,7 @@ Map<String, List<String>> masterMapFuncAll(String week) {
       "Entertainment": ["Bønner", "Skoger", "Huler", "Underholdning"],
       "Coast": ["Bønne", "Innsjø", "Fjell", "Kyst"],
       "Population": ["Bønner", "Skoger", "Huler", "Befolkning"],
-      //New week
+      //Week 40
       "Continent": ["Hav", "Konstant", "Sukkerspinn", "Kontinent"],
       "Joey": [
         "Joey (baby koala)",
@@ -101,7 +102,13 @@ Map<String, List<String>> masterMapFuncAll(String week) {
       "Kangaroo": ["Koala", "Kiwi", "Kakao", "Kenguru"],
       "Boomerang": ["Pinne", "Golfball", "Frisbee", "Boomerang"],
       "Change": ["Vekslepenger", "Sjampo", "Kontanter", "Endring"],
-      "Page": ["Bok", "Potet", "Liste", "Side"]
+      "Page": ["Bok", "Potet", "Liste", "Side"],
+      //Week 42
+      "Thorns": ["Roser", "Poteter", "Søppelbøtter", "Torner"],
+      "Swallow": ["Sverge", "Tygge", "Spytte", "Svelge"],
+      "Support": ["Nøtter", "Stol", "Sjakkbrett", "Støtte"],
+      "Anteater": ["Beltedyr", "Dovendyr", "Kamel", "Maursluker"],
+      "Venomous": ["Blodig", "Vemodig", "Hyggelig", "Giftig"]
     };
   }
 
@@ -125,6 +132,7 @@ Map<String, List<String>> randomQuestion(masterList) {
 
 List<String> answerListFunc() {
   return [
+    //Week 38
     "Aboriginer",
     "Dømme/dømt person",
     "Unnskyldte seg",
@@ -132,6 +140,7 @@ List<String> answerListFunc() {
     "Krevde/Hevdet",
     "Kreve tilbake",
     "Byer/Tettsteder",
+    //Week 39
     "Hjem til",
     "Unik",
     "Mangfoldig",
@@ -142,12 +151,19 @@ List<String> answerListFunc() {
     "Underholdning",
     "Kyst",
     "Befolkning",
+    //Week 40
     "Kontinent",
     "Joey (baby kenguru)",
     "Kenguru",
     "Boomerang",
     "Vekslepenger",
     "Endring",
-    "Side"
+    "Side",
+    //Week 42
+    "Torner",
+    "Svelge",
+    "Støtte",
+    "Maursluker",
+    "Giftig"
   ];
 }
