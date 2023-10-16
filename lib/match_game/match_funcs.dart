@@ -26,10 +26,16 @@ Map<String, String> matchMapFuncEngToNor() {
     "Kangaroo": "Kenguru",
     "Boomerang": "Boomerang",
     "Change": "Endring",
-    "Page": "Side"
+    "Page": "Side",
+    //Week 42
+    "Thorns": "Torner",
+    "Swallow": "Svelge",
+    "Support": "Støtte",
+    "Anteater": "Maursluker",
+    "Venomous": "Giftig"
   };
 }
-
+    
 // Translate Functions
 String? translateEngToNor(String engWord) {
   Map<String, String> matchMap = matchMapFuncEngToNor();
@@ -93,8 +99,22 @@ List<String> matchListFunc(String weekCount) {
       "Page",
       "Side"
     ];
+  } else if (weekCount == "Week 42") {
+    return [
+      "Thorns",
+      "Torner",
+      "Swallow",
+      "Svelge",
+      "Support",
+      "Støtte",
+      "Anteater",
+      "Maursluker",
+      "Venomous",
+      "Giftig"
+    ];
   } else if (weekCount == "All Weeks") {
     return [
+      //Week 38
       "Aboriginal", "Aboriginer",
       "Convict", "Dømme/dømt person",
       "Apologised", "Unnskyldte seg",
@@ -102,7 +122,7 @@ List<String> matchListFunc(String weekCount) {
       "Claimed", "Krevde/Hevdet",
       "Claim back", "Kreve tilbake",
       "Townships", "Byer/Tettsteder",
-      //New week
+      //Week 39
       "Home to", "Hjem til",
       "Unique", "Unik",
       "Diverse", "Mangfoldig",
@@ -113,13 +133,19 @@ List<String> matchListFunc(String weekCount) {
       "Entertainment", "Underholdning",
       "Coast", "Kyst",
       "Population", "Befolkning",
-      //New week
+      //Week 40
       "Continent", "Kontinent",
       "Joey", "Joey (baby kenguru)",
       "Kangaroo", "Kenguru",
       "Boomerang", "Boomerang",
       "Change", "Endring",
-      "Page", "Side"
+      "Page", "Side",
+      //Week 42
+      "Thorns", "Torner",
+      "Swallow", "Svelge",
+      "Support", "Støtte",
+      "Anteater", "Maursluker",
+      "Venomous", "Giftig"
     ];
   }
   return [];
