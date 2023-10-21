@@ -32,7 +32,15 @@ Map<String, String> matchMapFuncEngToNor() {
     "Swallow": "Svelge",
     "Support": "Støtte",
     "Anteater": "Maursluker",
-    "Venomous": "Giftig"
+    "Venomous": "Giftig",
+    //Week 43
+    "Prevent": "Forhindre",
+    "Fence": "Gjerde",
+    "Settle": "Gjøre opp",
+    "Rabbit proof": "Kaninsikkert",
+    "Settlement": "Bosetting",
+    "Harse": "Hard",
+    "Exhausted": "Utslitt"
   };
 }
     
@@ -112,6 +120,23 @@ List<String> matchListFunc(String weekCount) {
       "Venomous",
       "Giftig"
     ];
+  } else if (weekCount == "Week 43") {
+    return [
+    "Prevent",
+    "Forhindre",
+    "Fence",
+    "Gjerde",
+    "Settle",
+    "Gjøre opp",
+    "Rabbit proof",
+    "Kaninsikkert",
+    "Settlement",
+    "Bosetting",
+    "Harse",
+    "Hard",
+    "Exhausted",
+    "Utslitt"
+    ];
   } else if (weekCount == "All Weeks") {
     return [
       //Week 38
@@ -145,7 +170,15 @@ List<String> matchListFunc(String weekCount) {
       "Swallow", "Svelge",
       "Support", "Støtte",
       "Anteater", "Maursluker",
-      "Venomous", "Giftig"
+      "Venomous", "Giftig",
+      //Week 43
+      "Prevent", "Forhindre",
+      "Fence", "Gjerde",
+      "Settle", "Gjøre opp",
+      "Rabbit proof", "Kaninsikkert",
+      "Settlement", "Bosetting",
+      "Harse", "Hard",
+      "Exhausted", "Utslitt"
     ];
   }
   return [];

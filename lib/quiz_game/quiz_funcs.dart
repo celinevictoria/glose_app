@@ -53,6 +53,16 @@ Map<String, List<String>> masterMapFuncAll(String week) {
       "Anteater": ["Beltedyr", "Dovendyr", "Kamel", "Maursluker"],
       "Venomous": ["Blodig", "Vemodig", "Hyggelig", "Giftig"]
     };
+  } else if (week == "Week 43") {
+    masterMap = {
+      "Prevent": ["Prisforskjell", "Brevdue", "Vurdere", "Forhindre"],
+      "Fence": ["Dør", "Vindu", "Grøft", "Gjerde"],
+      "Settle": ["Bosette", "Sitte", "Synge", "Gjøre opp"],
+      "Rabbit proof": ["Ulvesikkert", "Kaninbevis", "Slangesikkert", "Kaninsikkert"],
+      "Settlement": ["Bondegård", "Bolledeig", "Bombetrussel", "Bosetting"],
+      "Harse": ["Hest", "Skremmende", "Korps","Hard"],
+      "Exhausted": ["Livlig", "Sjokkert", "Ekskjæreste", "Utslitt"]
+    };
   } else if (week == "All Weeks") {
     masterMap = {
       //Week 38
@@ -96,7 +106,15 @@ Map<String, List<String>> masterMapFuncAll(String week) {
       "Swallow": ["Sverge", "Tygge", "Spytte", "Svelge"],
       "Support": ["Nøtter", "Stol", "Sjakkbrett", "Støtte"],
       "Anteater": ["Beltedyr", "Dovendyr", "Kamel", "Maursluker"],
-      "Venomous": ["Blodig", "Vemodig", "Hyggelig", "Giftig"]
+      "Venomous": ["Blodig", "Vemodig", "Hyggelig", "Giftig"],
+      //Week 43
+      "Prevent": ["Prisforskjell", "Brevdue", "Vurdere", "Forhindre"],
+      "Fence": ["Dør", "Vindu", "Grøft", "Gjerde"],
+      "Settle": ["Bosette", "Sitte", "Synge", "Gjøre opp"],
+      "Rabbit proof": ["Ulvesikkert", "Kaninbevis", "Slangesikkert", "Kaninsikkert"],
+      "Settlement": ["Bondegård", "Bolledeig", "Bombetrussel", "Bosetting"],
+      "Harse": ["Hest", "Skremmende", "Korps","Hard"],
+      "Exhausted": ["Livlig", "Sjokkert", "Ekskjæreste", "Utslitt"]
     };
   } else {
     masterMap = {};
@@ -151,6 +169,14 @@ List<String> answerListFunc() {
     "Svelge",
     "Støtte",
     "Maursluker",
-    "Giftig"
+    "Giftig",
+    //Week 43
+    "Forhindre",
+    "Gjerde",
+    "Gjøre opp", "Bosette",
+    "Kaninsikkert",
+    "Bosetting",
+    "Hard",
+    "Utslitt"
   ];
 }
