@@ -60,7 +60,7 @@ Map<String, List<String>> masterMapFuncAll(String week) {
       "Settle": ["Bosette", "Sitte", "Synge", "Gjøre opp"],
       "Rabbit proof": ["Ulvesikkert", "Kaninbevis", "Slangesikkert", "Kaninsikkert"],
       "Settlement": ["Bondegård", "Bolledeig", "Bombetrussel", "Bosetting"],
-      "Harse": ["Hest", "Vondt i halsen", "Korps","test"],
+      "Harse": ["Hest", "Skremmende", "Korps","Hard"],
       "Exhausted": ["Livlig", "Sjokkert", "Ekskjæreste", "Utslitt"]
     };
   } else if (week == "All Weeks") {
@@ -113,7 +113,7 @@ Map<String, List<String>> masterMapFuncAll(String week) {
       "Settle": ["Bosette", "Sitte", "Synge", "Gjøre opp"],
       "Rabbit proof": ["Ulvesikkert", "Kaninbevis", "Slangesikkert", "Kaninsikkert"],
       "Settlement": ["Bondegård", "Bolledeig", "Bombetrussel", "Bosetting"],
-      "Harse": ["Hest", "Vondt i halsen", "Korps","test"],
+      "Harse": ["Hest", "Skremmende", "Korps","Hard"],
       "Exhausted": ["Livlig", "Sjokkert", "Ekskjæreste", "Utslitt"]
     };
   } else {
@@ -176,7 +176,7 @@ List<String> answerListFunc() {
     "Gjøre opp", "Bosette",
     "Kaninsikkert",
     "Bosetting",
-    "test",
+    "Hard",
     "Utslitt"
   ];
 }

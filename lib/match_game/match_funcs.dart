@@ -39,7 +39,7 @@ Map<String, String> matchMapFuncEngToNor() {
     "Settle": "Gjøre opp",
     "Rabbit proof": "Kaninsikkert",
     "Settlement": "Bosetting",
-    "Harse": "test",
+    "Harse": "Hard",
     "Exhausted": "Utslitt"
   };
 }
@@ -133,7 +133,7 @@ List<String> matchListFunc(String weekCount) {
     "Settlement",
     "Bosetting",
     "Harse",
-    "test",
+    "Hard",
     "Exhausted",
     "Utslitt"
     ];
@@ -177,7 +177,7 @@ List<String> matchListFunc(String weekCount) {
       "Settle", "Gjøre opp",
       "Rabbit proof", "Kaninsikkert",
       "Settlement", "Bosetting",
-      "Harse", "test",
+      "Harse", "Hard",
       "Exhausted", "Utslitt"
     ];
   }
