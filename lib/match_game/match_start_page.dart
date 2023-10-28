@@ -22,6 +22,7 @@ class MatchStartPage extends StatelessWidget {
           MatchStartButton(weekInput: "Week 40"),
           MatchStartButton(weekInput: "Week 42"),
           MatchStartButton(weekInput: "Week 43"),
+          MatchStartButton(weekInput: "Week 44"),
         ]));
   }
 }

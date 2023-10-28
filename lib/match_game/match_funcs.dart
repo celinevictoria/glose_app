@@ -40,7 +40,16 @@ Map<String, String> matchMapFuncEngToNor() {
     "Rabbit proof": "Kaninsikkert",
     "Settlement": "Bosetting",
     "Harse": "Hard",
-    "Exhausted": "Utslitt"
+    "Exhausted": "Utslitt",
+    //Week 44
+    "Meal": "Måltid",
+    "Barbecuing": "Grilling",
+    "Meat": "Kjøtt",
+    "Chilled": "Avkjølt",
+    "Multiculturual influences": "Flerkulturelle påvirkninger",
+    "Aussies": "Australiere",
+    "Surf and turf": "Surf og turf",
+    "Esky": "Termos"
   };
 }
     
@@ -137,6 +146,25 @@ List<String> matchListFunc(String weekCount) {
     "Exhausted",
     "Utslitt"
     ];
+  } else if (weekCount == "Week 44") {
+    return [
+    "Meal",
+    "Måltid",
+    "Barbecuing",
+    "Grilling",
+    "Meat",
+    "Kjøtt",
+    "Chilled",
+    "Avkjølt",
+    "Multiculturual influences",
+    "Flerkulturelle påvirkninger",
+    "Aussies",
+    "Australiere",
+    "Surf and turf",
+    "Surf og turf",
+    "Esky",
+    "Termos"
+    ];
   } else if (weekCount == "All Weeks") {
     return [
       //Week 38
@@ -178,7 +206,16 @@ List<String> matchListFunc(String weekCount) {
       "Rabbit proof", "Kaninsikkert",
       "Settlement", "Bosetting",
       "Harse", "Hard",
-      "Exhausted", "Utslitt"
+      "Exhausted", "Utslitt",
+      //Week 44
+      "Meal", "Måltid",
+      "Barbecuing", "Grilling",
+      "Meat", "Kjøtt",
+      "Chilled", "Avkjølt",
+      "Multiculturual influences", "Flerkulturelle påvirkninger",
+      "Aussies", "Australiere",
+      "Surf and turf", "Surf og turf",
+      "Esky", "Termos"
     ];
   }
   return [];
