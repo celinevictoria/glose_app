@@ -50,7 +50,7 @@ class AnswerCard extends StatelessWidget {
                             )
                       : answerList.contains(cardText)
                           ? MaterialPageRoute(
-                              builder: (context) => GamePage(
+                              builder: (context) => QuizGamePage(
                                 questionCount: questionCount + 1,
                                 scoreCount: scoreCount + 1,
                                 responseText: "Correct!",
@@ -58,7 +58,7 @@ class AnswerCard extends StatelessWidget {
                               ),
                             )
                           : MaterialPageRoute(
-                              builder: (context) => GamePage(
+                              builder: (context) => QuizGamePage(
                                 questionCount: questionCount + 1,
                                 scoreCount: scoreCount,
                                 responseText: "Wrong!",

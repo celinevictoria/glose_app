@@ -21,7 +21,7 @@ class QuizStartButton extends StatelessWidget {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => GamePage(
+                    builder: (context) => QuizGamePage(
                       questionCount: 0,
                       scoreCount: 0,
                       responseText: "",
