@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:glose_app/quiz_game/quiz_start_page.dart';
 import './match_game/match_start_page.dart';
+import 'match_game_timed/timed_start_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({
@@ -23,7 +24,8 @@ class HomePage extends StatelessWidget {
           )),
           const Padding(padding: EdgeInsets.all(10)),
           gamemodeCard(context, "Quiz Mode"),
-          gamemodeCard(context, "Match Mode")
+          gamemodeCard(context, "Match Mode"),
+          gamemodeCard(context, "Timed Mode")
         ]));
   }
 
@@ -42,7 +44,7 @@ class HomePage extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) =>
-                      gameModeTest == "Quiz Mode" ? const QuizStartPage() : const MatchStartPage(),
+                      gameModeTest == "Quiz Mode" ? const QuizStartPage() : gameModeTest == "Match Mode" ? const MatchStartPage() : const TimedStartPage(),
                 ));
           },
           child: SizedBox(
