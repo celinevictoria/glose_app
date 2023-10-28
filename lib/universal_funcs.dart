@@ -15,3 +15,15 @@ int weekToQuestionCount(String week) {
     return 43;
   }
 }
+
+List<String> weekList() {
+  return [
+    "All Weeks",
+    "Week 38",
+    "Week 39",
+    "Week 40",
+    "Week 42",
+    "Week 43",
+    "Week 44"
+  ];
+}
