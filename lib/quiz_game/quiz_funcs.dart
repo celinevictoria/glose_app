@@ -13,9 +13,19 @@ Map<String, List<String>> masterMapFuncAll(String week) {
         "Dømme/dømt person"
       ],
       "Apologised": ["Same", "Sov", "Danset", "Unnskyldte seg"],
-      "Indidigenous people": ["Skilpaddefolk", "Late mennesker", "Lave mennesker", "Urfolk"],
+      "Indidigenous people": [
+        "Skilpaddefolk",
+        "Late mennesker",
+        "Lave mennesker",
+        "Urfolk"
+      ],
       "Claimed": ["Lagde/Fant", "Dusjet/Badet", "Stjal/Lånte", "Krevde/Hevdet"],
-      "Claim back": ["Rygge tilbake", "Kysse tilbake", "Dytte frem", "Kreve tilbake"],
+      "Claim back": [
+        "Rygge tilbake",
+        "Kysse tilbake",
+        "Dytte frem",
+        "Kreve tilbake"
+      ],
       "Townships": ["Bønner", "Skoger", "Huler", "Byer/Tettsteder"],
     };
   } else if (week == "Week 39") {
@@ -58,10 +68,31 @@ Map<String, List<String>> masterMapFuncAll(String week) {
       "Prevent": ["Prisforskjell", "Brevdue", "Vurdere", "Forhindre"],
       "Fence": ["Dør", "Vindu", "Grøft", "Gjerde"],
       "Settle": ["Bosette", "Sitte", "Synge", "Gjøre opp"],
-      "Rabbit proof": ["Ulvesikkert", "Kaninbevis", "Slangesikkert", "Kaninsikkert"],
+      "Rabbit proof": [
+        "Ulvesikkert",
+        "Kaninbevis",
+        "Slangesikkert",
+        "Kaninsikkert"
+      ],
       "Settlement": ["Bondegård", "Bolledeig", "Bombetrussel", "Bosetting"],
-      "Harse": ["Hest", "Skremmende", "Korps","Hard"],
+      "Harse": ["Hest", "Skremmende", "Korps", "Hard"],
       "Exhausted": ["Livlig", "Sjokkert", "Ekskjæreste", "Utslitt"]
+    };
+  } else if (week == "Week 44") {
+    masterMap = {
+      "Meal": ["Frokost", "Lunsj", "Middag", "Måltid"],
+      "Barbecuing": ["Matlaging", "Støvsuging", "Synging", "Grilling"],
+      "Meat": ["Grønnsaker", "Potet", "Salat", "Kjøtt"],
+      "Chilled": ["Oppvarmet", "Vått", "Gult", "Avkjølt"],
+      "Multiculturual influences": [
+        "Flerkulturelle mennesker",
+        "Multivitaminer",
+        "Populære influensere",
+        "Flerkulturelle påvirkninger"
+      ],
+      "Aussies": ["Nordmenn", "Kiwier", "Amerikanere", "Australiere"],
+      "Surf and turf": ["Nemo og Dory", "Knoll og Tott", "Surfing og kakespising", "Surf og turf"],
+      "Esky": ["Matboks", "Vannflaske", "Søppelpose", "Termos"]
     };
   } else if (week == "All Weeks") {
     masterMap = {
@@ -74,9 +105,19 @@ Map<String, List<String>> masterMapFuncAll(String week) {
         "Dømme/dømt person"
       ],
       "Apologised": ["Same", "Sov", "Danset", "Unnskyldte seg"],
-      "Indidigenous people": ["Skilpaddefolk", "Late mennesker", "Lave mennesker", "Urfolk"],
+      "Indidigenous people": [
+        "Skilpaddefolk",
+        "Late mennesker",
+        "Lave mennesker",
+        "Urfolk"
+      ],
       "Claimed": ["Lagde/Fant", "Dusjet/Badet", "Stjal/Lånte", "Krevde/Hevdet"],
-      "Claim back": ["Rygge tilbake", "Kysse tilbake", "Dytte frem", "Kreve tilbake"],
+      "Claim back": [
+        "Rygge tilbake",
+        "Kysse tilbake",
+        "Dytte frem",
+        "Kreve tilbake"
+      ],
       "Townships": ["Bønner", "Skoger", "Huler", "Byer/Tettsteder"],
       //Week 39
       "Home to": ["Hjemmefra", "Synge til", "Potetgull fra", "Hjem til"],
@@ -111,10 +152,29 @@ Map<String, List<String>> masterMapFuncAll(String week) {
       "Prevent": ["Prisforskjell", "Brevdue", "Vurdere", "Forhindre"],
       "Fence": ["Dør", "Vindu", "Grøft", "Gjerde"],
       "Settle": ["Bosette", "Sitte", "Synge", "Gjøre opp"],
-      "Rabbit proof": ["Ulvesikkert", "Kaninbevis", "Slangesikkert", "Kaninsikkert"],
+      "Rabbit proof": [
+        "Ulvesikkert",
+        "Kaninbevis",
+        "Slangesikkert",
+        "Kaninsikkert"
+      ],
       "Settlement": ["Bondegård", "Bolledeig", "Bombetrussel", "Bosetting"],
-      "Harse": ["Hest", "Skremmende", "Korps","Hard"],
-      "Exhausted": ["Livlig", "Sjokkert", "Ekskjæreste", "Utslitt"]
+      "Harse": ["Hest", "Skremmende", "Korps", "Hard"],
+      "Exhausted": ["Livlig", "Sjokkert", "Ekskjæreste", "Utslitt"],
+      //Week 44
+      "Meal": ["Frokost", "Lunsj", "Middag", "Måltid"],
+      "Barbecuing": ["Matlaging", "Støvsuging", "Synging", "Grilling"],
+      "Meat": ["Grønnsaker", "Potet", "Salat", "Kjøtt"],
+      "Chilled": ["Oppvarmet", "Vått", "Gult", "Avkjølt"],
+      "Multiculturual influences": [
+        "Flerkulturelle mennesker",
+        "Multivitaminer",
+        "Populære influensere",
+        "Flerkulturelle påvirkninger"
+      ],
+      "Aussies": ["Nordmenn", "Kiwier", "Amerikanere", "Australiere"],
+      "Surf and turf": ["Nemo og Dory", "Knoll og Tott", "Surfing og kakespising", "Surf og turf"],
+      "Esky": ["Matboks", "Vannflaske", "Søppelpose", "Termos"]
     };
   } else {
     masterMap = {};
@@ -128,7 +188,8 @@ Map<String, List<String>> masterMapFuncAll(String week) {
 }
 
 Map<String, List<String>> randomQuestion(masterList) {
-  String question = masterList.keys.elementAt(Random().nextInt(masterList.length));
+  String question =
+      masterList.keys.elementAt(Random().nextInt(masterList.length));
 
   List<String> answerList = masterList[question];
 
@@ -177,6 +238,15 @@ List<String> answerListFunc() {
     "Kaninsikkert",
     "Bosetting",
     "Hard",
-    "Utslitt"
+    "Utslitt",
+    //Week 44
+    "Måltid",
+    "Grilling",
+    "Kjøtt",
+    "Avkjølt",
+    "Flerkulturelle påvirkninger",
+    "Australiere",
+    "Surf og turf",
+    "Termos"
   ];
 }
