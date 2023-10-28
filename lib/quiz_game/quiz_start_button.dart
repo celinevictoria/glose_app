@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'quiz_game_page.dart';
 
-class StartButton extends StatelessWidget {
-  const StartButton({
+class QuizStartButton extends StatelessWidget {
+  const QuizStartButton({
     super.key,
     required this.weekInput
   });
@@ -30,8 +30,8 @@ class StartButton extends StatelessWidget {
                   ));
             },
             child: SizedBox(
-              width: 300,
-              height: 100,
+              width: 275,
+              height: 75,
               child: Center(
                   child: Text("Start Game - $weekInput",
                       style: const TextStyle(fontSize: 20))),

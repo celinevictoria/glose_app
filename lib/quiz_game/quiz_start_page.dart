@@ -19,7 +19,7 @@ class QuizStartPage extends StatelessWidget {
             child: ListView.builder(
           itemCount: weekList().length,
           itemBuilder: (context, index) {
-            return StartButton(weekInput: weekList()[index]);
+            return QuizStartButton(weekInput: weekList()[index]);
           },
         ))
         ]));

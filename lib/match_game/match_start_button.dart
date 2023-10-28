@@ -28,8 +28,8 @@ class MatchStartButton extends StatelessWidget {
                   ));
             },
             child: SizedBox(
-              width: 300,
-              height: 100,
+              width: 275,
+              height: 75,
               child: Center(
                   child: Text("Start Game - $weekInput", style: const TextStyle(fontSize: 20))),
             )),
