@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'match_start_button.dart';
+import '../universal_funcs.dart';
 
 class MatchStartPage extends StatelessWidget {
   const MatchStartPage({
@@ -14,15 +15,14 @@ class MatchStartPage extends StatelessWidget {
           title: const Text("Match Mode"),
           //automaticallyImplyLeading: false,
         ),
-        body: const Column(children: [
-          Padding(padding: EdgeInsets.all(30)),
-          MatchStartButton(weekInput: "All Weeks"),
-          MatchStartButton(weekInput: "Week 38"),
-          MatchStartButton(weekInput: "Week 39"),
-          MatchStartButton(weekInput: "Week 40"),
-          MatchStartButton(weekInput: "Week 42"),
-          MatchStartButton(weekInput: "Week 43"),
-          MatchStartButton(weekInput: "Week 44"),
+        body: Column(children: [
+          Expanded(
+            child: ListView.builder(
+          itemCount: weekList().length,
+          itemBuilder: (context, index) {
+            return MatchStartButton(weekInput: weekList()[index]);
+          },
+        ))
         ]));
   }
 }

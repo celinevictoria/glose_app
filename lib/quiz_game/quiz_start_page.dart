@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'quiz_start_button.dart';
+import '../universal_funcs.dart';
 
 class QuizStartPage extends StatelessWidget {
   const QuizStartPage({
@@ -13,15 +14,14 @@ class QuizStartPage extends StatelessWidget {
           title: const Text("Glose App"),
           //automaticallyImplyLeading: false,
         ),
-        body: const Column(children: [
-          Padding(padding: EdgeInsets.all(30)),
-          StartButton(weekInput: "All Weeks"),
-          StartButton(weekInput: "Week 38"),
-          StartButton(weekInput: "Week 39"),
-          StartButton(weekInput: "Week 40"),
-          StartButton(weekInput: "Week 42"),
-          StartButton(weekInput: "Week 43"),
-          StartButton(weekInput: "Week 44"),
+        body: Column(children: [
+          Expanded(
+            child: ListView.builder(
+          itemCount: weekList().length,
+          itemBuilder: (context, index) {
+            return QuizStartButton(weekInput: weekList()[index]);
+          },
+        ))
         ]));
   }
 }

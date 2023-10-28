@@ -91,7 +91,12 @@ Map<String, List<String>> masterMapFuncAll(String week) {
         "Flerkulturelle påvirkninger"
       ],
       "Aussies": ["Nordmenn", "Kiwier", "Amerikanere", "Australiere"],
-      "Surf and turf": ["Nemo og Dory", "Knoll og Tott", "Surfing og kakespising", "Surf og turf"],
+      "Surf and turf": [
+        "Nemo og Dory",
+        "Knoll og Tott",
+        "Surfing og kakespising",
+        "Surf og turf"
+      ],
       "Esky": ["Matboks", "Vannflaske", "Søppelpose", "Termos"]
     };
   } else if (week == "All Weeks") {
@@ -173,7 +178,12 @@ Map<String, List<String>> masterMapFuncAll(String week) {
         "Flerkulturelle påvirkninger"
       ],
       "Aussies": ["Nordmenn", "Kiwier", "Amerikanere", "Australiere"],
-      "Surf and turf": ["Nemo og Dory", "Knoll og Tott", "Surfing og kakespising", "Surf og turf"],
+      "Surf and turf": [
+        "Nemo og Dory",
+        "Knoll og Tott",
+        "Surfing og kakespising",
+        "Surf og turf"
+      ],
       "Esky": ["Matboks", "Vannflaske", "Søppelpose", "Termos"]
     };
   } else {
