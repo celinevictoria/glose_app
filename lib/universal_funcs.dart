@@ -11,8 +11,10 @@ int weekToQuestionCount(String week) {
     return 7;
   } else if (week == "Week 44") {
     return 8;
+  } else if (week == "Week 45") {
+    return 9;
   } else {
-    return 43;
+    return 52;
   }
 }
 
@@ -24,6 +26,7 @@ List<String> weekList() {
     "Week 40",
     "Week 42",
     "Week 43",
-    "Week 44"
+    "Week 44",
+    "Week 45"
   ];
 }

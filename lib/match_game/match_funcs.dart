@@ -49,10 +49,20 @@ Map<String, String> matchMapFuncEngToNor() {
     "Multiculturual influences": "Flerkulturelle påvirkninger",
     "Aussies": "Australiere",
     "Surf and turf": "Surf og turf",
-    "Esky": "Termos"
+    "Esky": "Termos",
+    //Week 45
+    "Silent": "Stille",
+    "Floor": "Gulv",
+    "Dormitory": "Hybel",
+    "Doze off": "Sovne av",
+    "Absolutely": "Absolutt",
+    "Footsteps": "Skritt",
+    "Curtain": "Gardin",
+    "Pavement": "Fortau",
+    "Silence": "Stillhet"
   };
 }
-    
+
 // Translate Functions
 String? translateEngToNor(String engWord) {
   Map<String, String> matchMap = matchMapFuncEngToNor();
@@ -131,39 +141,60 @@ List<String> matchListFunc(String weekCount) {
     ];
   } else if (weekCount == "Week 43") {
     return [
-    "Prevent",
-    "Forhindre",
-    "Fence",
-    "Gjerde",
-    "Settle",
-    "Gjøre opp",
-    "Rabbit proof",
-    "Kaninsikkert",
-    "Settlement",
-    "Bosetting",
-    "Harse",
-    "Hard",
-    "Exhausted",
-    "Utslitt"
+      "Prevent",
+      "Forhindre",
+      "Fence",
+      "Gjerde",
+      "Settle",
+      "Gjøre opp",
+      "Rabbit proof",
+      "Kaninsikkert",
+      "Settlement",
+      "Bosetting",
+      "Harse",
+      "Hard",
+      "Exhausted",
+      "Utslitt"
     ];
   } else if (weekCount == "Week 44") {
     return [
-    "Meal",
-    "Måltid",
-    "Barbecuing",
-    "Grilling",
-    "Meat",
-    "Kjøtt",
-    "Chilled",
-    "Avkjølt",
-    "Multiculturual influences",
-    "Flerkulturelle påvirkninger",
-    "Aussies",
-    "Australiere",
-    "Surf and turf",
-    "Surf og turf",
-    "Esky",
-    "Termos"
+      "Meal",
+      "Måltid",
+      "Barbecuing",
+      "Grilling",
+      "Meat",
+      "Kjøtt",
+      "Chilled",
+      "Avkjølt",
+      "Multiculturual influences",
+      "Flerkulturelle påvirkninger",
+      "Aussies",
+      "Australiere",
+      "Surf and turf",
+      "Surf og turf",
+      "Esky",
+      "Termos"
+    ];
+  } else if (weekCount == "Week 45") {
+    return [
+      "Silent",
+      "Stille",
+      "Floor",
+      "Gulv",
+      "Dormitory",
+      "Hybel",
+      "Doze off",
+      "Sovne av",
+      "Absolutely",
+      "Absolutt",
+      "Footsteps",
+      "Skritt",
+      "Curtain",
+      "Gardin",
+      "Pavement",
+      "Fortau",
+      "Silence",
+      "Stillhet"
     ];
   } else if (weekCount == "All Weeks") {
     return [
@@ -215,7 +246,17 @@ List<String> matchListFunc(String weekCount) {
       "Multiculturual influences", "Flerkulturelle påvirkninger",
       "Aussies", "Australiere",
       "Surf and turf", "Surf og turf",
-      "Esky", "Termos"
+      "Esky", "Termos",
+      //Week 45
+      "Silent", "Stille",
+      "Floor", "Gulv",
+      "Dormitory", "Hybel",
+      "Doze off", "Sovne av",
+      "Absolutely", "Absolutt",
+      "Footsteps", "Skritt",
+      "Curtain", "Gardin",
+      "Pavement", "Fortau",
+      "Silence", "Stillhet"
     ];
   }
   return [];
