@@ -6,7 +6,7 @@ class MatchStartButton extends StatelessWidget {
   const MatchStartButton({super.key, required this.weekInput});
 
   final String weekInput;
-  
+
   @override
   Widget build(BuildContext context) {
     final List<String> matchList = matchListFunc(weekInput)..shuffle();
@@ -24,14 +24,17 @@ class MatchStartButton extends StatelessWidget {
                       questionCount: 0,
                       weekCount: weekInput,
                       matchList: matchList,
+                      startTime: DateTime.now().millisecondsSinceEpoch,
                     ),
                   ));
+              debugPrint(DateTime.now().toString());
             },
             child: SizedBox(
               width: 275,
               height: 75,
               child: Center(
-                  child: Text("Start Game - $weekInput", style: const TextStyle(fontSize: 20))),
+                  child: Text("Start Game - $weekInput",
+                      style: const TextStyle(fontSize: 20))),
             )),
       ),
     );

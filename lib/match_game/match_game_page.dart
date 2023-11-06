@@ -3,17 +3,23 @@ import 'match_funcs.dart';
 
 import '../universal_funcs.dart';
 import '../end_page.dart';
+import 'match_end_page.dart';
 
 // ignore: must_be_immutable
 class MatchGamePage extends StatefulWidget {
-  MatchGamePage(
-      {super.key, required this.questionCount, required this.weekCount, required this.matchList
-      //required this.scoreCount,
-      });
+  MatchGamePage({
+    super.key,
+    required this.questionCount,
+    required this.weekCount,
+    required this.matchList,
+    required this.startTime,
+    //required this.scoreCount,
+  });
 
   final int questionCount;
   final String weekCount;
   List<String> matchList;
+  final int startTime;
   //final int scoreCount;
 
   @override
@@ -66,7 +72,8 @@ class _MatchGamePageState extends State<MatchGamePage> {
                         side: BorderSide(
                           color: Theme.of(context).colorScheme.outline,
                         ),
-                        borderRadius: const BorderRadius.all(Radius.circular(12)),
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(12)),
                       )
                     : null,
                 child: InkWell(
@@ -136,20 +143,22 @@ class _MatchGamePageState extends State<MatchGamePage> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => EndPage(
+                            builder: (context) => MatchEndPage(
                               scoreCount: scoreCount,
                               weekInput: widget.weekCount,
+                              startTime: widget.startTime,
+                              endTime: DateTime.now().millisecondsSinceEpoch,
                             ),
                           ));
+                      debugPrint(DateTime.now().toString());
                     }
                   },
                   child: Center(
-                        child: Text(
-                      widget.matchList[index],
-                      style: const TextStyle(fontSize: 18),
-                      textAlign: TextAlign.center,
-                    )),
-                  
+                      child: Text(
+                    widget.matchList[index],
+                    style: const TextStyle(fontSize: 18),
+                    textAlign: TextAlign.center,
+                  )),
                 ),
               );
             },
