@@ -99,6 +99,18 @@ Map<String, List<String>> masterMapFuncAll(String week) {
       ],
       "Esky": ["Matboks", "Vannflaske", "Søppelpose", "Termos"]
     };
+  } else if (week == "Week 45") {
+    masterMap = {
+      "Silent": ["Støyende", "Rask", "Smart", "Stille"],
+      "Floor": ["Blomst", "Mel", "Tak", "Gulv"],
+      "Dormitory": ["Bil", "Hotell", "Hus", "Hybel"],
+      "Doze off": ["Dosere", "Koke opp", "Spore av", "Sovne av"],
+      "Absolutely": ["Magemuskler", "Apparat", "Applikasjon", "Absolutt"],
+      "Footsteps": ["Skryt", "Skosåle", "Gummistøvler", "Skritt"],
+      "Curtain": ["Støvsuger", "Bord", "Pute", "Gardin"],
+      "Pavement": ["Scene", "Sykkelsti", "Motorvei", "Fortau"],
+      "Silence": ["Sag", "Skolemat", "Puslespill", "Stillhet"]
+    };
   } else if (week == "All Weeks") {
     masterMap = {
       //Week 38
@@ -184,7 +196,17 @@ Map<String, List<String>> masterMapFuncAll(String week) {
         "Surfing og kakespising",
         "Surf og turf"
       ],
-      "Esky": ["Matboks", "Vannflaske", "Søppelpose", "Termos"]
+      "Esky": ["Matboks", "Vannflaske", "Søppelpose", "Termos"],
+      //Week 45
+      "Silent": ["Støyende", "Rask", "Smart", "Stille"],
+      "Floor": ["Blomst", "Mel", "Tak", "Gulv"],
+      "Dormitory": ["Bil", "Hotell", "Hus", "Hybel"],
+      "Doze off": ["Dosere", "Koke opp", "Spore av", "Sovne av"],
+      "Absolutely": ["Magemuskler", "Apparat", "Applikasjon", "Absolutt"],
+      "Footsteps": ["Skryt", "Skosåle", "Gummistøvler", "Skritt"],
+      "Curtain": ["Støvsuger", "Bord", "Pute", "Gardin"],
+      "Pavement": ["Scene", "Sykkelsti", "Motorvei", "Fortau"],
+      "Silence": ["Sag", "Skolemat", "Puslespill", "Stillhet"]
     };
   } else {
     masterMap = {};
@@ -257,6 +279,16 @@ List<String> answerListFunc() {
     "Flerkulturelle påvirkninger",
     "Australiere",
     "Surf og turf",
-    "Termos"
+    "Termos",
+    //Week 45
+    "Stille",
+    "Gulv",
+    "Hybel",
+    "Sovne av",
+    "Absolutt",
+    "Skritt",
+    "Gardin",
+    "Fortau",
+    "Stillhet"
   ];
 }
