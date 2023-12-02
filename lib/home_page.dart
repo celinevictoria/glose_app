@@ -14,44 +14,51 @@ class HomePage extends StatelessWidget {
           title: const Text("Glose App"),
           automaticallyImplyLeading: false,
         ),
-        body: Column(children: [
-          const Padding(padding: EdgeInsets.all(20)),
+        body: Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+          //const Padding(padding: EdgeInsets.all(20)),
+          Center(
+            child: Image.asset("assets/glose_app.png"),
+          ),
           const Center(
               child: Text(
             "Choose game mode:",
             style: TextStyle(fontSize: 20),
           )),
-          const Padding(padding: EdgeInsets.all(10)),
-          gamemodeCard(context, "Quiz Mode"),
-          gamemodeCard(context, "Match Mode")
+          //const Padding(padding: EdgeInsets.all(10)),
+          Column(
+            children: [
+              newGamemodeCard(context, "Quiz Mode"),
+              newGamemodeCard(context, "Match Mode"),
+            ],
+          ),
         ]));
   }
 
-  Center gamemodeCard(
-    BuildContext context,
-    String gameModeTest,
-  ) {
-    return Center(
-        child: Card(
-      clipBehavior: Clip.hardEdge,
-      child: InkWell(
-          splashColor: const Color(0xff6750a4).withAlpha(30),
-          onTap: () {
-            debugPrint("Tapped");
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) =>
-                      gameModeTest == "Quiz Mode" ? const QuizStartPage() : const MatchStartPage(),
-                ));
-          },
-          child: SizedBox(
-            width: 300,
-            height: 100,
-            child: Center(
-                child: Text(gameModeTest,
-                    textAlign: TextAlign.center, style: const TextStyle(fontSize: 20))),
-          )),
-    ));
+  Padding newGamemodeCard(BuildContext context, String gameMode) {
+    return Padding(
+      padding: const EdgeInsets.all(5),
+      child: Center(
+        child: SizedBox(
+          height: 50,
+          width: MediaQuery.of(context).size.width - 30,
+          child: ElevatedButton(
+            style:
+                ElevatedButton.styleFrom(backgroundColor: const Color.fromARGB(255, 250, 202, 162)),
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) =>
+                        gameMode == "Quiz Mode" ? const QuizStartPage() : const MatchStartPage(),
+                  ));
+            },
+            child: Text(
+              gameMode,
+              style: const TextStyle(color: Colors.black87, fontSize: 20),
+            ),
+          ),
+        ),
+      ),
+    );
   }
 }
