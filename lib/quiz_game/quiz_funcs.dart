@@ -212,9 +212,9 @@ Map<String, List<String>> masterMapFuncAll(String week) {
     masterMap = {};
   }
 
-  for (List<String> optionList in masterMap.values) {
-    optionList = optionList..shuffle();
-  }
+  // for (List<String> optionList in masterMap.values) {
+  //   optionList = optionList..shuffle();
+  // }
 
   return masterMap;
 }
