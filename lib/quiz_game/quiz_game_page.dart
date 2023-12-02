@@ -56,12 +56,12 @@ class _QuizGamePageState extends State<QuizGamePage> {
 
     if (selectedAnswer != "") {
       for (String o in optionList) {
-        if(answerList.contains(o)) {
+        if (answerList.contains(o)) {
           theCorrectAnswerList[optionList.indexOf(o)] = true;
         }
       }
       for (int i = 0; i < cardColors.length; i++) {
-        if(theCorrectAnswerList[i]) {
+        if (theCorrectAnswerList[i]) {
           cardColors[i] = correctColor;
         } else {
           cardColors[i] = wrongColor;
@@ -80,7 +80,7 @@ class _QuizGamePageState extends State<QuizGamePage> {
               style: const TextStyle(fontSize: 20),
             ),
             Text(
-              "Score: ${widget.scoreCount} / $totalQuestionCount",
+              "Score: ${widget.scoreCount + questionScore} / $totalQuestionCount",
               style: const TextStyle(fontSize: 20),
             ),
           ],
@@ -115,33 +115,36 @@ class _QuizGamePageState extends State<QuizGamePage> {
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                       backgroundColor:
-                          const Color.fromARGB(255, 255, 185, 193)),
+                          const Color.fromARGB(255, 250, 202, 162)),
                   onPressed: () {
-                    //done = true;
-                    if (answerList.contains(selectedAnswer)) {
-                      questionScore = 1;
-                      questionResponseText = "Correct!";
+                    if (done) {
+                      if (answerList.contains(selectedAnswer)) {
+                        questionScore = 1;
+                        questionResponseText = "Correct!";
+                      }
+                      // ignore: avoid_print
+                      print(questionScore);
+                      Navigator.push(
+                          context,
+                          widget.questionCount ==
+                                  weekToQuestionCount(widget.weekInput) - 1
+                              ? MaterialPageRoute(
+                                  builder: (context) => EndPage(
+                                    scoreCount:
+                                        widget.scoreCount + questionScore,
+                                    weekInput: widget.weekInput,
+                                  ),
+                                )
+                              : MaterialPageRoute(
+                                  builder: (context) => QuizGamePage(
+                                    questionCount: widget.questionCount + 1,
+                                    scoreCount:
+                                        widget.scoreCount + questionScore,
+                                    responseText: questionResponseText,
+                                    weekInput: widget.weekInput,
+                                  ),
+                                ));
                     }
-                    // ignore: avoid_print
-                    print(questionScore);
-                    Navigator.push(
-                        context,
-                        widget.questionCount ==
-                                weekToQuestionCount(widget.weekInput) - 1
-                            ? MaterialPageRoute(
-                                builder: (context) => EndPage(
-                                  scoreCount: widget.scoreCount + questionScore,
-                                  weekInput: widget.weekInput,
-                                ),
-                              )
-                            : MaterialPageRoute(
-                                builder: (context) => QuizGamePage(
-                                  questionCount: widget.questionCount + 1,
-                                  scoreCount: widget.scoreCount + questionScore,
-                                  responseText: questionResponseText,
-                                  weekInput: widget.weekInput,
-                                ),
-                              ));
                   },
                   child: const Text(
                     'Done',
@@ -162,10 +165,7 @@ class _QuizGamePageState extends State<QuizGamePage> {
           color: cardColor,
           shape: selectedAnswer == cardText
               ? const RoundedRectangleBorder(
-                  side: BorderSide(
-                    color: Colors.black87,
-                    width: 1.25
-                  ),
+                  side: BorderSide(color: Colors.black87, width: 1.25),
                   borderRadius: BorderRadius.all(Radius.circular(12)),
                 )
               : null,
