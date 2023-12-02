@@ -24,7 +24,6 @@ class QuizStartButton extends StatelessWidget {
                     builder: (context) => QuizGamePage(
                       questionCount: 0,
                       scoreCount: 0,
-                      responseText: "",
                       weekInput: weekInput,
                     ),
                   ));

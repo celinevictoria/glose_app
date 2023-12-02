@@ -8,12 +8,10 @@ class QuizGamePage extends StatefulWidget {
       {super.key,
       required this.questionCount,
       required this.scoreCount,
-      required this.responseText,
       required this.weekInput});
 
   final int questionCount;
   final int scoreCount;
-  final String responseText;
   final String weekInput;
 
   @override
@@ -26,12 +24,6 @@ class _QuizGamePageState extends State<QuizGamePage> {
   int questionScore = 0;
   final List<String> answerList = answerListFunc();
   bool done = false;
-  String questionResponseText = "Wrong!";
-
-  // Color cardColor0 = const Color.fromARGB(255, 242, 243, 243);
-  // Color cardColor1 = const Color.fromARGB(255, 242, 243, 243);
-  // Color cardColor2 = const Color.fromARGB(255, 242, 243, 243);
-  // Color cardColor3 = const Color.fromARGB(255, 242, 243, 243);
 
   List<Color> cardColors = [
     const Color.fromARGB(255, 242, 243, 243),
@@ -120,7 +112,6 @@ class _QuizGamePageState extends State<QuizGamePage> {
                     if (done) {
                       if (answerList.contains(selectedAnswer)) {
                         questionScore = 1;
-                        questionResponseText = "Correct!";
                       }
                       // ignore: avoid_print
                       print(questionScore);
@@ -140,7 +131,6 @@ class _QuizGamePageState extends State<QuizGamePage> {
                                     questionCount: widget.questionCount + 1,
                                     scoreCount:
                                         widget.scoreCount + questionScore,
-                                    responseText: questionResponseText,
                                     weekInput: widget.weekInput,
                                   ),
                                 ));
