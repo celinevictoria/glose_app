@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../end_page.dart';
-import 'quiz_answer_card.dart';
 import 'quiz_funcs.dart';
 import '../universal_funcs.dart';
 
@@ -29,6 +28,23 @@ class _QuizGamePageState extends State<QuizGamePage> {
   bool done = false;
   String questionResponseText = "Wrong!";
 
+  // Color cardColor0 = const Color.fromARGB(255, 242, 243, 243);
+  // Color cardColor1 = const Color.fromARGB(255, 242, 243, 243);
+  // Color cardColor2 = const Color.fromARGB(255, 242, 243, 243);
+  // Color cardColor3 = const Color.fromARGB(255, 242, 243, 243);
+
+  List<Color> cardColors = [
+    const Color.fromARGB(255, 242, 243, 243),
+    const Color.fromARGB(255, 242, 243, 243),
+    const Color.fromARGB(255, 242, 243, 243),
+    const Color.fromARGB(255, 242, 243, 243)
+  ];
+
+  Color correctColor = const Color.fromARGB(255, 184, 229, 146);
+  Color wrongColor = const Color.fromARGB(255, 229, 149, 146);
+
+  List<bool> theCorrectAnswerList = [false, false, false, false];
+
   @override
   Widget build(BuildContext context) {
     final Map<String, List<String>> masterList =
@@ -36,21 +52,35 @@ class _QuizGamePageState extends State<QuizGamePage> {
     final int totalQuestionCount = weekToQuestionCount(widget.weekInput);
     List<String> optionList = masterList.values.elementAt(widget.questionCount);
 
+    //answerList.contains(selectedAnswer)
+
+    if (selectedAnswer != "") {
+      for (String o in optionList) {
+        if(answerList.contains(o)) {
+          theCorrectAnswerList[optionList.indexOf(o)] = true;
+        }
+      }
+      for (int i = 0; i < cardColors.length; i++) {
+        if(theCorrectAnswerList[i]) {
+          cardColors[i] = correctColor;
+        } else {
+          cardColors[i] = wrongColor;
+        }
+      }
+    }
+
     return Scaffold(
       appBar: AppBar(
         centerTitle: false,
-        //title: Text(masterList.keys.elementAt(questionCount)),
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
               "Question: ${widget.questionCount} / $totalQuestionCount",
               style: const TextStyle(fontSize: 20),
-              //textAlign: TextAlign.start,
             ),
             Text(
               "Score: ${widget.scoreCount} / $totalQuestionCount",
-              //textAlign: TextAlign.center,
               style: const TextStyle(fontSize: 20),
             ),
           ],
@@ -69,10 +99,10 @@ class _QuizGamePageState extends State<QuizGamePage> {
             height: 450,
             child: ListView(
               children: [
-                optionCard(optionList[0]),
-                optionCard(optionList[1]),
-                optionCard(optionList[2]),
-                optionCard(optionList[3]),
+                optionCard(optionList[0], cardColors[0]),
+                optionCard(optionList[1], cardColors[1]),
+                optionCard(optionList[2], cardColors[2]),
+                optionCard(optionList[3], cardColors[3]),
               ],
             ),
           ),
@@ -87,13 +117,13 @@ class _QuizGamePageState extends State<QuizGamePage> {
                       backgroundColor:
                           const Color.fromARGB(255, 255, 185, 193)),
                   onPressed: () {
-                    done = true;
+                    //done = true;
                     if (answerList.contains(selectedAnswer)) {
                       questionScore = 1;
                       questionResponseText = "Correct!";
                     }
+                    // ignore: avoid_print
                     print(questionScore);
-                    //Navigator.push();
                     Navigator.push(
                         context,
                         widget.questionCount ==
@@ -121,55 +151,22 @@ class _QuizGamePageState extends State<QuizGamePage> {
               ),
             ),
           ),
-
-          // SizedBox(
-          //   height: 450,
-          //   child: ListView.builder(
-          //     itemCount: optionList.length,
-          //     itemBuilder: (context, index) {
-          //       return Padding(
-          //         padding: const EdgeInsets.all(8.0),
-          //         child: AnswerCard(
-          //           cardText: optionList[index],
-          //           questionCount: questionCount,
-          //           scoreCount: scoreCount,
-          //           weekInput: weekInput,
-          //         ),
-          //       );
-          //     },
-          //   ),
-          // )
         ],
-      ),
-      bottomNavigationBar: BottomAppBar(
-        color: Colors.transparent,
-        elevation: 0,
-        padding: const EdgeInsets.all(8),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              widget.responseText,
-              style: const TextStyle(fontSize: 20),
-            ),
-          ],
-        ),
       ),
     );
   }
 
-  SizedBox optionCard(String cardText) {
-    Color cardColor = const Color.fromARGB(255, 242, 243, 243);
-
+  SizedBox optionCard(String cardText, Color cardColor) {
     return SizedBox(
       child: Card(
           color: cardColor,
           shape: selectedAnswer == cardText
-              ? RoundedRectangleBorder(
+              ? const RoundedRectangleBorder(
                   side: BorderSide(
-                    color: Theme.of(context).colorScheme.outline,
+                    color: Colors.black87,
+                    width: 1.25
                   ),
-                  borderRadius: const BorderRadius.all(Radius.circular(12)),
+                  borderRadius: BorderRadius.all(Radius.circular(12)),
                 )
               : null,
           child: Padding(
@@ -180,7 +177,10 @@ class _QuizGamePageState extends State<QuizGamePage> {
                   setState(() {
                     selectedAnswer = cardText;
                   });
+
+                  done = true;
                 }
+
                 // ignore: avoid_print
                 print(selectedAnswer);
               },
