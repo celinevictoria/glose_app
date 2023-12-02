@@ -5,10 +5,7 @@ import '../universal_funcs.dart';
 
 class QuizGamePage extends StatefulWidget {
   const QuizGamePage(
-      {super.key,
-      required this.questionCount,
-      required this.scoreCount,
-      required this.weekInput});
+      {super.key, required this.questionCount, required this.scoreCount, required this.weekInput});
 
   final int questionCount;
   final int scoreCount;
@@ -20,8 +17,8 @@ class QuizGamePage extends StatefulWidget {
 
 class _QuizGamePageState extends State<QuizGamePage> {
   String selectedAnswer = "";
-  //bool firstBuild = true;
   int questionScore = 0;
+  bool firstBuildOutside = true;
   final List<String> answerList = answerListFunc();
   bool done = false;
 
@@ -33,18 +30,33 @@ class _QuizGamePageState extends State<QuizGamePage> {
   ];
 
   Color correctColor = const Color.fromARGB(255, 184, 229, 146);
-  Color wrongColor = const Color.fromARGB(255, 229, 149, 146);
+  //Color wrongColor = const Color.fromARGB(255, 229, 149, 146);
 
   List<bool> theCorrectAnswerList = [false, false, false, false];
 
+  List<int> orderList = [0, 1, 2, 3]..shuffle();
+
+  List<String> randomOrder(List<int> orderList, List<String> toOrderList) {
+    List<String> tempList = ["", "", "", ""];
+
+    int count = 0;
+    for (int number in orderList) {
+      tempList[count] = toOrderList[number];
+      count += 1;
+    }
+
+    return tempList;
+  }
+
   @override
   Widget build(BuildContext context) {
-    final Map<String, List<String>> masterList =
-        masterMapFuncAll(widget.weekInput);
     final int totalQuestionCount = weekToQuestionCount(widget.weekInput);
-    List<String> optionList = masterList.values.elementAt(widget.questionCount);
 
-    //answerList.contains(selectedAnswer)
+    final Map<String, List<String>> masterMap = masterMapFuncAll(widget.weekInput);
+
+    List<String> optionList = masterMap.values.elementAt(widget.questionCount);
+
+    optionList = randomOrder(orderList, optionList);
 
     if (selectedAnswer != "") {
       for (String o in optionList) {
@@ -55,8 +67,6 @@ class _QuizGamePageState extends State<QuizGamePage> {
       for (int i = 0; i < cardColors.length; i++) {
         if (theCorrectAnswerList[i]) {
           cardColors[i] = correctColor;
-        } else {
-          cardColors[i] = wrongColor;
         }
       }
     }
@@ -84,7 +94,7 @@ class _QuizGamePageState extends State<QuizGamePage> {
         children: [
           Center(
               child: Text(
-            masterList.keys.elementAt(widget.questionCount),
+            masterMap.keys.elementAt(widget.questionCount),
             style: const TextStyle(fontSize: 20),
           )),
           SizedBox(
@@ -106,8 +116,7 @@ class _QuizGamePageState extends State<QuizGamePage> {
                 width: MediaQuery.of(context).size.width - 30,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                      backgroundColor:
-                          const Color.fromARGB(255, 250, 202, 162)),
+                      backgroundColor: const Color.fromARGB(255, 250, 202, 162)),
                   onPressed: () {
                     if (done) {
                       if (answerList.contains(selectedAnswer)) {
@@ -117,28 +126,25 @@ class _QuizGamePageState extends State<QuizGamePage> {
                       print(questionScore);
                       Navigator.push(
                           context,
-                          widget.questionCount ==
-                                  weekToQuestionCount(widget.weekInput) - 1
+                          widget.questionCount == weekToQuestionCount(widget.weekInput) - 1
                               ? MaterialPageRoute(
                                   builder: (context) => EndPage(
-                                    scoreCount:
-                                        widget.scoreCount + questionScore,
+                                    scoreCount: widget.scoreCount + questionScore,
                                     weekInput: widget.weekInput,
                                   ),
                                 )
                               : MaterialPageRoute(
                                   builder: (context) => QuizGamePage(
                                     questionCount: widget.questionCount + 1,
-                                    scoreCount:
-                                        widget.scoreCount + questionScore,
+                                    scoreCount: widget.scoreCount + questionScore,
                                     weekInput: widget.weekInput,
                                   ),
                                 ));
                     }
                   },
                   child: const Text(
-                    'Done',
-                    style: TextStyle(color: Colors.black87),
+                    'Next Question',
+                    style: TextStyle(color: Colors.black87, fontSize: 20),
                   ),
                 ),
               ),
@@ -179,8 +185,8 @@ class _QuizGamePageState extends State<QuizGamePage> {
                   width: 275,
                   height: 75,
                   child: Center(
-                      child:
-                          Text(cardText, style: const TextStyle(fontSize: 20))),
+                      child: Text(cardText,
+                          style: const TextStyle(fontSize: 20, color: Colors.black87))),
                 ),
               ),
             ),
