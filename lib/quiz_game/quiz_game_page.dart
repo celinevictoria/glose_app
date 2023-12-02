@@ -30,7 +30,7 @@ class _QuizGamePageState extends State<QuizGamePage> {
   ];
 
   Color correctColor = const Color.fromARGB(255, 184, 229, 146);
-  //Color wrongColor = const Color.fromARGB(255, 229, 149, 146);
+  Color wrongColor = const Color.fromARGB(255, 229, 149, 146);
 
   List<bool> theCorrectAnswerList = [false, false, false, false];
 
@@ -67,6 +67,8 @@ class _QuizGamePageState extends State<QuizGamePage> {
       for (int i = 0; i < cardColors.length; i++) {
         if (theCorrectAnswerList[i]) {
           cardColors[i] = correctColor;
+        } else if (!theCorrectAnswerList[i] && optionList[i] == selectedAnswer) {
+          cardColors[i] = wrongColor;
         }
       }
     }
@@ -98,7 +100,7 @@ class _QuizGamePageState extends State<QuizGamePage> {
             style: const TextStyle(fontSize: 20),
           )),
           SizedBox(
-            height: 450,
+            height: 350,
             child: ListView(
               children: [
                 optionCard(optionList[0], cardColors[0]),
