@@ -14,10 +14,10 @@ class HomePage extends StatelessWidget {
           title: const Text("Glose App"),
           automaticallyImplyLeading: false,
         ),
-        body: Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+        body: Column(children: [
           //const Padding(padding: EdgeInsets.all(20)),
           Center(
-            child: Image.asset("assets/glose_app.png"),
+            child: Image.asset("assets/glose_app.png", height: 350,),
           ),
           const Center(
               child: Text(

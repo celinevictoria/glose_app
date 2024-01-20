@@ -111,6 +111,14 @@ Map<String, List<String>> masterMapFuncAll(String week) {
       "Pavement": ["Scene", "Sykkelsti", "Motorvei", "Fortau"],
       "Silence": ["Sag", "Skolemat", "Puslespill", "Stillhet"]
     };
+  } else if (week == "Week 4") {
+    masterMap = {
+      "Worries": ["Betalinger", "Ryggsekker", "Sjokoladeboller", "Bekymringer"],
+      "Self-conscious": ["Overbevist", "Følsom", "Sympati", "Selvbevisst"],
+      "Teenager": ["Barn", "Sykehus", "Dokost", "Tenåring"],
+      "Complex": ["Datamaskin", "Oppsummering", "Bilbelte", "Komplekser"],
+      "Grown up": ["Bonde", "Jobb", "Barn", "Voksen"]
+    };
   } else if (week == "All Weeks") {
     masterMap = {
       //Week 38
@@ -206,7 +214,13 @@ Map<String, List<String>> masterMapFuncAll(String week) {
       "Footsteps": ["Skryt", "Skosåle", "Gummistøvler", "Skritt"],
       "Curtain": ["Støvsuger", "Bord", "Pute", "Gardin"],
       "Pavement": ["Scene", "Sykkelsti", "Motorvei", "Fortau"],
-      "Silence": ["Sag", "Skolemat", "Puslespill", "Stillhet"]
+      "Silence": ["Sag", "Skolemat", "Puslespill", "Stillhet"],
+      //Week 4
+      "Worries": ["Betalinger", "Ryggsekker", "Sjokoladeboller", "Bekymringer"],
+      "Self-conscious": ["Overbevist", "Følsom", "Sympati", "Selvbevisst"],
+      "Teenager": ["Barn", "Sykehus", "Dokost", "Tenåring"],
+      "Complex": ["Datamaskin", "Oppsummering", "Bilbelte", "Komplekser"],
+      "Grown up": ["Bonde", "Jobb", "Barn", "Voksen"]
     };
   } else {
     masterMap = {};
@@ -285,6 +299,12 @@ List<String> answerListFunc() {
     "Skritt",
     "Gardin",
     "Fortau",
-    "Stillhet"
+    "Stillhet",
+    //Week 4
+    "Bekymringer",
+    "Selvbevisst",
+    "Tenåring",
+    "Komplekser",
+    "Voksen"
   ];
 }

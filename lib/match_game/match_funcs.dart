@@ -59,7 +59,13 @@ Map<String, String> matchMapFuncEngToNor() {
     "Footsteps": "Skritt",
     "Curtain": "Gardin",
     "Pavement": "Fortau",
-    "Silence": "Stillhet"
+    "Silence": "Stillhet",
+    //Week 4
+    "Worries": "Bekymringer",
+    "Self-conscious": "Selvbevisst",
+    "Teenager": "Tenåring",
+    "Complex": "Komplekser",
+    "Grown up": "Voksen"
   };
 }
 
@@ -196,6 +202,19 @@ List<String> matchListFunc(String weekCount) {
       "Silence",
       "Stillhet"
     ];
+  } else if (weekCount == "Week 4") {
+    return [
+      "Worries",
+      "Bekymringer",
+      "Self-conscious",
+      "Selvbevisst",
+      "Teenager",
+      "Tenåring",
+      "Complex",
+      "Komplekser",
+      "Grown up",
+      "Voksen"
+    ];
   } else if (weekCount == "All Weeks") {
     return [
       //Week 38
@@ -256,7 +275,13 @@ List<String> matchListFunc(String weekCount) {
       "Footsteps", "Skritt",
       "Curtain", "Gardin",
       "Pavement", "Fortau",
-      "Silence", "Stillhet"
+      "Silence", "Stillhet",
+      //Week 4
+      "Worries", "Bekymringer",
+      "Self-conscious", "Selvbevisst",
+      "Teenager", "Tenåring",
+      "Complex", "Komplekser",
+      "Grown up", "Voksen"
     ];
   }
   return [];
