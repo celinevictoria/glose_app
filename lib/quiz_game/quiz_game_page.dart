@@ -92,15 +92,17 @@ class _QuizGamePageState extends State<QuizGamePage> {
         automaticallyImplyLeading: false,
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
+          const SizedBox(height: 15,),
           Center(
               child: Text(
             masterMap.keys.elementAt(widget.questionCount),
             style: const TextStyle(fontSize: 20),
           )),
+          const SizedBox(height: 15,),
           SizedBox(
-            height: 350,
+            height: 250,
             child: ListView(
               children: [
                 optionCard(optionList[0], cardColors[0]),
@@ -110,11 +112,10 @@ class _QuizGamePageState extends State<QuizGamePage> {
               ],
             ),
           ),
-          Align(
-            alignment: Alignment.bottomCenter,
-            child: Center(
+          //const SizedBox(height: 15,),
+          Center(
               child: SizedBox(
-                height: 50,
+                height: 30,
                 width: MediaQuery.of(context).size.width - 30,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
@@ -151,7 +152,6 @@ class _QuizGamePageState extends State<QuizGamePage> {
                 ),
               ),
             ),
-          ),
         ],
       ),
     );
@@ -159,6 +159,7 @@ class _QuizGamePageState extends State<QuizGamePage> {
 
   SizedBox optionCard(String cardText, Color cardColor) {
     return SizedBox(
+      height: 50,
       child: Card(
           color: cardColor,
           shape: selectedAnswer == cardText
